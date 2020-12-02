@@ -13,4 +13,9 @@ const (
 	Ed25519 = SigningAlgo("ed25519")
 	// Sr25519 represents the Sr25519 signature system.
 	Sr25519 = SigningAlgo("sr25519")
+	//sm2
+	Sm2 = SigningAlgo("sm2")
 )
+
+//set global Algo type
+var Algo = Sm2

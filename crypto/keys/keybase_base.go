@@ -3,6 +3,7 @@ package keys
 import (
 	"bufio"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"os"
 
 	"github.com/cosmos/go-bip39"
@@ -77,8 +78,8 @@ func newBaseKeybase(optionsFns ...KeybaseOption) baseKeybase {
 	options := kbOptions{
 		keygenFunc:           StdPrivKeyGen,
 		deriveFunc:           StdDeriveKey,
-		supportedAlgos:       []SigningAlgo{Secp256k1},
-		supportedAlgosLedger: []SigningAlgo{Secp256k1},
+		supportedAlgos:       []SigningAlgo{Algo},
+		supportedAlgosLedger: []SigningAlgo{Algo},
 	}
 
 	for _, optionFn := range optionsFns {
@@ -93,6 +94,8 @@ func newBaseKeybase(optionsFns ...KeybaseOption) baseKeybase {
 func StdPrivKeyGen(bz []byte, algo SigningAlgo) (tmcrypto.PrivKey, error) {
 	if algo == Secp256k1 {
 		return SecpPrivKeyGen(bz), nil
+	}else if algo == Sm2{
+		return Sm2PrivKeyGen(bz), nil
 	}
 	return nil, ErrUnsupportedSigningAlgo
 }
@@ -103,6 +106,14 @@ func SecpPrivKeyGen(bz []byte) tmcrypto.PrivKey {
 	copy(bzArr[:], bz)
 	return secp256k1.PrivKeySecp256k1(bzArr)
 }
+
+func Sm2PrivKeyGen(bz []byte) tmcrypto.PrivKey {
+	var bzArr sm2.PrivKeySm2
+
+	copy(bzArr[:], bz)
+	return bzArr
+}
+
 
 // SignWithLedger signs a binary message with the ledger device referenced by an Info object
 // and returns the signed bytes and the public key. It returns an error if the device could
@@ -253,6 +264,8 @@ func (kb baseKeybase) writeMultisigKey(w infoWriter, name string, pub tmcrypto.P
 func StdDeriveKey(mnemonic string, bip39Passphrase, hdPath string, algo SigningAlgo) ([]byte, error) {
 	if algo == Secp256k1 {
 		return SecpDeriveKey(mnemonic, bip39Passphrase, hdPath)
+	} else if algo == Sm2{ //add sm2
+		return Sm2DeriveKey(mnemonic, bip39Passphrase, hdPath)
 	}
 	return nil, ErrUnsupportedSigningAlgo
 }
@@ -272,6 +285,18 @@ func SecpDeriveKey(mnemonic string, bip39Passphrase, hdPath string) ([]byte, err
 	return derivedKey[:], err
 }
 
+// Sm2DeriveKey derives and returns the secp256k1 private key for the given seed
+func Sm2DeriveKey(mnemonic string, bip39Passphrase, hdPath string) ([]byte, error) {
+	seed, err := bip39.NewSeedWithErrorChecking(mnemonic, bip39Passphrase)
+	if err != nil {
+		return nil, err
+	}
+	seed = append(seed,hdPath...)
+	privSm2 := sm2.GenPrivKeySm2FromSecret(seed)
+
+	return privSm2[:], nil
+}
+
 // CreateHDPath returns BIP 44 object from account and index parameters.
 func CreateHDPath(account uint32, index uint32) *hd.BIP44Params {
 	return hd.NewFundraiserParams(account, types.GetConfig().GetCoinType(), index)
@@ -289,6 +314,7 @@ func (kb baseKeybase) SupportedAlgosLedger() []SigningAlgo {
 
 // IsSupportedAlgorithm returns whether the signing algorithm is in the passed-in list of supported algorithms.
 func IsSupportedAlgorithm(supported []SigningAlgo, algo SigningAlgo) bool {
+
 	for _, supportedAlgo := range supported {
 		if algo == supportedAlgo {
 			return true
