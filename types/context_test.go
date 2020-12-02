@@ -1,6 +1,7 @@
 package types_test
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 	"time"
 
@@ -10,8 +11,6 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	abci "github.com/tendermint/tendermint/abci/types"
-
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	"github.com/cosmos/cosmos-sdk/store"
 	"github.com/cosmos/cosmos-sdk/types"
@@ -138,7 +137,7 @@ func TestContextHeader(t *testing.T) {
 
 	height := int64(5)
 	time := time.Now()
-	addr := secp256k1.GenPrivKey().PubKey().Address()
+	addr := algo.GenPrivKey().PubKey().Address()
 	proposer := types.ConsAddress(addr)
 
 	ctx = types.NewContext(nil, abci.Header{}, false, nil)

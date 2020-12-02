@@ -2,6 +2,7 @@ package ante_test
 
 import (
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -83,6 +84,7 @@ func TestConsumeSignatureVerificationGas(t *testing.T) {
 		{"PubKeySecp256k1", args{sdk.NewInfiniteGasMeter(), nil, secp256k1.GenPrivKey().PubKey(), params}, types.DefaultSigVerifyCostSecp256k1, false},
 		{"Multisig", args{sdk.NewInfiniteGasMeter(), multisignature1.Marshal(), multisigKey1, params}, expectedCost1, false},
 		{"unknown key", args{sdk.NewInfiniteGasMeter(), nil, nil, params}, 0, true},
+		{"PubKeySm2", args{sdk.NewInfiniteGasMeter(), nil, sm2.GenPrivKey().PubKey(), params}, types.DefaultSigVerifyCostSm2, false},
 	}
 	for _, tt := range tests {
 		tt := tt

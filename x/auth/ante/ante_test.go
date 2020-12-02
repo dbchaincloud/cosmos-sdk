@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"math/rand"
 	"strings"
 	"testing"
@@ -587,10 +589,12 @@ func generatePubKeysAndSignatures(n int, msg []byte, keyTypeed25519 bool) (pubke
 	signatures = make([][]byte, n)
 	for i := 0; i < n; i++ {
 		var privkey crypto.PrivKey
-		if rand.Int63()%2 == 0 {
+		if rand.Int63()%3 == 0 {
 			privkey = ed25519.GenPrivKey()
-		} else {
+		} else if rand.Int63()%3 == 1{
 			privkey = secp256k1.GenPrivKey()
+		}else{
+			privkey = sm2.GenPrivKey()
 		}
 		pubkeys[i] = privkey.PubKey()
 		signatures[i], _ = privkey.Sign(msg)
@@ -607,6 +611,8 @@ func expectedGasCostByKeys(pubkeys []crypto.PubKey) uint64 {
 			cost += types.DefaultParams().SigVerifyCostED25519
 		case strings.Contains(pubkeyType, "secp256k1"):
 			cost += types.DefaultParams().SigVerifyCostSecp256k1
+		case strings.Contains(pubkeyType,"sm2"):
+			cost += types.DefaultParams().SigVerifyCostSm2
 		default:
 			panic("unexpected key type")
 		}
@@ -691,11 +697,14 @@ func TestCustomSignatureVerificationGasConsumer(t *testing.T) {
 	// setup
 	app, ctx := createTestApp(true)
 	ctx = ctx.WithBlockHeight(1)
-	// setup an ante handler that only accepts PubKeyEd25519
+	// setup an ante handler that  accepts PubKeyEd25519 or PubKeySm2
 	anteHandler := ante.NewAnteHandler(app.AccountKeeper, app.SupplyKeeper, func(meter sdk.GasMeter, sig []byte, pubkey crypto.PubKey, params types.Params) error {
 		switch pubkey := pubkey.(type) {
 		case ed25519.PubKeyEd25519:
 			meter.ConsumeGas(params.SigVerifyCostED25519, "ante verify: ed25519")
+			return nil
+		case sm2.PubKeySm2:
+			meter.ConsumeGas(params.SigVerifyCostSm2, "ante verify: Sm2")
 			return nil
 		default:
 			return sdkerrors.Wrapf(sdkerrors.ErrInvalidPubKey, "unrecognized public key type: %T", pubkey)
@@ -716,8 +725,8 @@ func TestCustomSignatureVerificationGasConsumer(t *testing.T) {
 	tx = types.NewTestTx(ctx, msgs, privs, accnums, seqs, fee)
 	checkInvalidTx(t, anteHandler, ctx, tx, false, sdkerrors.ErrInvalidPubKey)
 
-	// verify that an ed25519 account gets accepted
-	priv2 := ed25519.GenPrivKey()
+	// verify that an algo account gets accepted
+	priv2 := algo.GenPrivKey()
 	pub2 := priv2.PubKey()
 	addr2 := sdk.AccAddress(pub2.Address())
 	acc2 := app.AccountKeeper.NewAccountWithAddress(ctx, addr2)

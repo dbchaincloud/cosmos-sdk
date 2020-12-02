@@ -3,20 +3,19 @@ package mintkey_test
 import (
 	"bytes"
 	"errors"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"io"
 	"testing"
 
+	"github.com/cosmos/cosmos-sdk/crypto/keys"
+	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto/armor"
 	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
 )
 
 func TestArmorUnarmorPrivKey(t *testing.T) {
-	priv := secp256k1.GenPrivKey()
+	priv := algo.GenPrivKey()
 	armor := mintkey.EncryptArmorPrivKey(priv, "passphrase", "")
 	_, _, err := mintkey.UnarmorDecryptPrivKey(armor, "wrongpassphrase")
 	require.Error(t, err)
@@ -31,7 +30,7 @@ func TestArmorUnarmorPubKey(t *testing.T) {
 	cstore := keys.NewInMemory()
 
 	// Add keys and see they return in alphabetical order
-	info, _, err := cstore.CreateMnemonic("Bob", keys.English, "passphrase", keys.Secp256k1)
+	info, _, err := cstore.CreateMnemonic("Bob", keys.English, "passphrase", keys.Algo)
 	require.NoError(t, err)
 	armored := mintkey.ArmorPubKeyBytes(info.GetPubKey().Bytes(), "")
 	pubBytes, algo, err := mintkey.UnarmorPubKeyBytes(armored)

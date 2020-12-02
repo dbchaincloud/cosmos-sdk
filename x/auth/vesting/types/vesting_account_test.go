@@ -3,11 +3,11 @@ package types
 import (
 	"encoding/json"
 	"errors"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 	tmtime "github.com/tendermint/tendermint/types/time"
 
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -641,7 +641,7 @@ func TestTrackUndelegationPeriodicVestingAcc(t *testing.T) {
 }
 
 func TestNewBaseVestingAccount(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	_, err := NewBaseVestingAccount(
 		authtypes.NewBaseAccount(addr, sdk.NewCoins(), pubkey, 0, 0),
@@ -670,7 +670,7 @@ func TestNewBaseVestingAccount(t *testing.T) {
 }
 
 func TestGenesisAccountValidate(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	baseAcc := authtypes.NewBaseAccount(addr, nil, pubkey, 0, 0)
 	baseAccWithCoins := authtypes.NewBaseAccount(addr, nil, pubkey, 0, 0)
@@ -688,7 +688,7 @@ func TestGenesisAccountValidate(t *testing.T) {
 		},
 		{
 			"invalid base valid account",
-			authtypes.NewBaseAccount(addr, sdk.NewCoins(), secp256k1.GenPrivKey().PubKey(), 0, 0),
+			authtypes.NewBaseAccount(addr, sdk.NewCoins(), algo.GenPrivKey().PubKey(), 0, 0),
 			errors.New("pubkey and address pair is invalid"),
 		},
 		{
@@ -736,7 +736,7 @@ func TestGenesisAccountValidate(t *testing.T) {
 }
 
 func TestBaseVestingAccountJSON(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	coins := sdk.NewCoins(sdk.NewInt64Coin("test", 5))
 	baseAcc := authtypes.NewBaseAccount(addr, coins, pubkey, 10, 50)
@@ -757,7 +757,7 @@ func TestBaseVestingAccountJSON(t *testing.T) {
 }
 
 func TestContinuousVestingAccountJSON(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	coins := sdk.NewCoins(sdk.NewInt64Coin("test", 5))
 	baseAcc := authtypes.NewBaseAccount(addr, coins, pubkey, 10, 50)
@@ -779,7 +779,7 @@ func TestContinuousVestingAccountJSON(t *testing.T) {
 }
 
 func TestPeriodicVestingAccountJSON(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	coins := sdk.NewCoins(sdk.NewInt64Coin("test", 5))
 	baseAcc := authtypes.NewBaseAccount(addr, coins, pubkey, 10, 50)
@@ -799,7 +799,7 @@ func TestPeriodicVestingAccountJSON(t *testing.T) {
 }
 
 func TestDelayedVestingAccountJSON(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	coins := sdk.NewCoins(sdk.NewInt64Coin("test", 5))
 	baseAcc := authtypes.NewBaseAccount(addr, coins, pubkey, 10, 50)

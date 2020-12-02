@@ -1,20 +1,19 @@
 package exported_test
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/exported"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/stretchr/testify/require"
 )
 
 func TestGenesisAccountsContains(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
-	acc := authtypes.NewBaseAccount(addr, nil, secp256k1.GenPrivKey().PubKey(), 0, 0)
+	acc := authtypes.NewBaseAccount(addr, nil, algo.GenPrivKey().PubKey(), 0, 0)
 
 	genAccounts := exported.GenesisAccounts{}
 	require.False(t, genAccounts.Contains(acc.GetAddress()))

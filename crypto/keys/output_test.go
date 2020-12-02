@@ -1,18 +1,18 @@
 package keys
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
 func TestBech32KeysOutput(t *testing.T) {
-	tmpKey := secp256k1.GenPrivKey().PubKey()
+	tmpKey := algo.GenPrivKey().PubKey()
 	bechTmpKey := sdk.MustBech32ifyPubKey(sdk.Bech32PubKeyTypeAccPub, tmpKey)
 	tmpAddr := sdk.AccAddress(tmpKey.Address().Bytes())
 

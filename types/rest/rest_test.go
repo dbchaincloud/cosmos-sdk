@@ -3,6 +3,7 @@
 package rest
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -10,13 +11,11 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/stretchr/testify/require"
+	"github.com/tendermint/tendermint/crypto"
 )
 
 func TestBaseReqValidateBasic(t *testing.T) {
@@ -167,7 +166,7 @@ func TestProcessPostResponse(t *testing.T) {
 	ctx := context.NewCLIContext()
 	height := int64(194423)
 
-	privKey := secp256k1.GenPrivKey()
+	privKey := algo.GenPrivKey()
 	pubKey := privKey.PubKey()
 	addr := types.AccAddress(pubKey.Address())
 	coins := types.NewCoins(types.NewCoin("atom", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))

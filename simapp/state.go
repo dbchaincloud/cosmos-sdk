@@ -3,12 +3,12 @@ package simapp
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"io"
 	"io/ioutil"
 	"math/rand"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 	tmtypes "github.com/tendermint/tendermint/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -152,7 +152,7 @@ func AppStateFromGenesisFileFn(r io.Reader, cdc *codec.Codec, genesisFile string
 			panic(err)
 		}
 
-		privKey := secp256k1.GenPrivKeySecp256k1(privkeySeed)
+		privKey := sm2.GenPrivKeySm2FromSecret(privkeySeed)
 
 		// create simulator accounts
 		simAcc := simulation.Account{PrivKey: privKey, PubKey: privKey.PubKey(), Address: acc.GetAddress()}

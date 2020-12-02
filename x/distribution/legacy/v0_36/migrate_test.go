@@ -1,9 +1,8 @@
 package v0_36
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	"github.com/cosmos/cosmos-sdk/types"
 	v034distr "github.com/cosmos/cosmos-sdk/x/distribution/legacy/v0_34"
@@ -12,7 +11,7 @@ import (
 )
 
 var (
-	priv       = secp256k1.GenPrivKey()
+	priv       = algo.GenPrivKey()
 	addr       = types.AccAddress(priv.PubKey().Address())
 	valAddr, _ = types.ValAddressFromBech32(addr.String())
 

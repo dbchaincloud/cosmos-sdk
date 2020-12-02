@@ -1,22 +1,21 @@
 package staking
 
 import (
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/tendermint/tendermint/crypto"
+	"github.com/tendermint/tendermint/crypto/algo"
 )
 
 // nolint:deadcode,unused,varcheck
 var (
-	priv1 = secp256k1.GenPrivKey()
+	priv1 = algo.GenPrivKey()
 	addr1 = sdk.AccAddress(priv1.PubKey().Address())
-	priv2 = secp256k1.GenPrivKey()
+	priv2 = algo.GenPrivKey()
 	addr2 = sdk.AccAddress(priv2.PubKey().Address())
-	addr3 = sdk.AccAddress(secp256k1.GenPrivKey().PubKey().Address())
-	priv4 = secp256k1.GenPrivKey()
+	addr3 = sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
+	priv4 = algo.GenPrivKey()
 	addr4 = sdk.AccAddress(priv4.PubKey().Address())
 	coins = sdk.Coins{sdk.NewCoin("foocoin", sdk.NewInt(10))}
 	fee   = auth.NewStdFee(

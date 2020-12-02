@@ -1,16 +1,15 @@
 package cli
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
+	"github.com/stretchr/testify/assert"
 )
 
 func createFakeTxBuilder() auth.TxBuilder {
@@ -41,7 +40,7 @@ func Test_splitAndCall_Splitting(t *testing.T) {
 	ctx := context.CLIContext{}
 	txBldr := createFakeTxBuilder()
 
-	addr := sdk.AccAddress(secp256k1.GenPrivKey().PubKey().Address())
+	addr := sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
 
 	// Add five messages
 	msgs := []sdk.Msg{

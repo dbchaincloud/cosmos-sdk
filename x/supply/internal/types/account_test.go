@@ -4,11 +4,10 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	yaml "gopkg.in/yaml.v2"
-
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
@@ -23,7 +22,7 @@ func TestModuleAccountMarshalYAML(t *testing.T) {
 	bs, err := yaml.Marshal(moduleAcc)
 	require.NoError(t, err)
 
-	want := "|\n  address: cosmos1n7rdpqvgf37ktx30a2sv2kkszk3m7ncmg5drhe\n  coins: []\n  public_key: \"\"\n  account_number: 0\n  sequence: 0\n  name: test\n  permissions:\n  - minter\n  - burner\n  - staking\n"
+	want := "|\n  address: cosmos12hsjayt9p5h7c4hvwnsa8exahl8zauaxg4mjk4\n  coins: []\n  public_key: \"\"\n  account_number: 0\n  sequence: 0\n  name: test\n  permissions:\n  - minter\n  - burner\n  - staking\n"
 	require.Equal(t, want, string(bs))
 }
 
@@ -51,7 +50,7 @@ func TestHasPermissions(t *testing.T) {
 }
 
 func TestValidate(t *testing.T) {
-	addr := sdk.AccAddress(secp256k1.GenPrivKey().PubKey().Address())
+	addr := sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
 	baseAcc := authtypes.NewBaseAccount(addr, sdk.Coins{}, nil, 0, 0)
 	tests := []struct {
 		name   string
@@ -84,7 +83,7 @@ func TestValidate(t *testing.T) {
 }
 
 func TestModuleAccountJSON(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	coins := sdk.NewCoins(sdk.NewInt64Coin("test", 5))
 	baseAcc := authtypes.NewBaseAccount(addr, coins, nil, 10, 50)

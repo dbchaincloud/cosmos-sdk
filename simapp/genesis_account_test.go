@@ -1,6 +1,7 @@
 package simapp_test
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 	"time"
 
@@ -10,11 +11,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 )
 
 func TestSimGenesisAccountValidate(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 
 	vestingStart := time.Now().UTC()
@@ -38,7 +38,7 @@ func TestSimGenesisAccountValidate(t *testing.T) {
 		{
 			"invalid basic account with mismatching address/pubkey",
 			simapp.SimGenesisAccount{
-				BaseAccount: authtypes.NewBaseAccount(addr, nil, secp256k1.GenPrivKey().PubKey(), 0, 0),
+				BaseAccount: authtypes.NewBaseAccount(addr, nil, algo.GenPrivKey().PubKey(), 0, 0),
 			},
 			true,
 		},

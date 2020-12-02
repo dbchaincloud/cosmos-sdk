@@ -4,11 +4,8 @@ package slashing
 
 import (
 	"errors"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
@@ -19,10 +16,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/cosmos/cosmos-sdk/x/supply"
 	supplyexported "github.com/cosmos/cosmos-sdk/x/supply/exported"
+	"github.com/stretchr/testify/require"
+	abci "github.com/tendermint/tendermint/abci/types"
 )
 
 var (
-	priv1 = secp256k1.GenPrivKey()
+	priv1 = algo.GenPrivKey()
 	addr1 = sdk.AccAddress(priv1.PubKey().Address())
 	coins = sdk.Coins{sdk.NewInt64Coin("foocoin", 10)}
 )

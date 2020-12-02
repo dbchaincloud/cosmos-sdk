@@ -1,6 +1,7 @@
 package bank_test
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -8,15 +9,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/distribution"
 	"github.com/cosmos/cosmos-sdk/x/supply"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
 	"github.com/cosmos/cosmos-sdk/x/bank/internal/types"
+	abci "github.com/tendermint/tendermint/abci/types"
+	"github.com/tendermint/tendermint/crypto"
 )
 
 type (
@@ -37,12 +36,12 @@ type (
 )
 
 var (
-	priv1 = secp256k1.GenPrivKey()
+	priv1 = algo.GenPrivKey()
 	addr1 = sdk.AccAddress(priv1.PubKey().Address())
-	priv2 = secp256k1.GenPrivKey()
+	priv2 = algo.GenPrivKey()
 	addr2 = sdk.AccAddress(priv2.PubKey().Address())
-	addr3 = sdk.AccAddress(secp256k1.GenPrivKey().PubKey().Address())
-	priv4 = secp256k1.GenPrivKey()
+	addr3 = sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
+	priv4 = algo.GenPrivKey()
 	addr4 = sdk.AccAddress(priv4.PubKey().Address())
 
 	coins     = sdk.Coins{sdk.NewInt64Coin("foocoin", 10)}

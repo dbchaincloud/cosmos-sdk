@@ -1,12 +1,11 @@
 package simulation
 
 import (
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"math/rand"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/tendermint/tendermint/crypto"
 )
 
 // Account contains a privkey, pubkey, address tuple
@@ -38,7 +37,7 @@ func RandomAccounts(r *rand.Rand, n int) []Account {
 		privkeySeed := make([]byte, 15)
 		r.Read(privkeySeed)
 
-		accs[i].PrivKey = secp256k1.GenPrivKeySecp256k1(privkeySeed)
+		accs[i].PrivKey = sm2.GenPrivKeySm2FromSecret(privkeySeed)
 		accs[i].PubKey = accs[i].PrivKey.PubKey()
 		accs[i].Address = sdk.AccAddress(accs[i].PubKey.Address())
 	}

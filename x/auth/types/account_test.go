@@ -2,14 +2,13 @@ package types
 
 import (
 	"errors"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/exported"
+	"github.com/stretchr/testify/require"
 )
 
 func TestBaseAddressPubKey(t *testing.T) {
@@ -101,7 +100,7 @@ func TestBaseAccountMarshal(t *testing.T) {
 }
 
 func TestGenesisAccountValidate(t *testing.T) {
-	pubkey := secp256k1.GenPrivKey().PubKey()
+	pubkey := algo.GenPrivKey().PubKey()
 	addr := sdk.AccAddress(pubkey.Address())
 	baseAcc := NewBaseAccount(addr, nil, pubkey, 0, 0)
 	tests := []struct {
@@ -116,7 +115,7 @@ func TestGenesisAccountValidate(t *testing.T) {
 		},
 		{
 			"invalid base valid account",
-			NewBaseAccount(addr, sdk.NewCoins(), secp256k1.GenPrivKey().PubKey(), 0, 0),
+			NewBaseAccount(addr, sdk.NewCoins(), algo.GenPrivKey().PubKey(), 0, 0),
 			errors.New("pubkey and address pair is invalid"),
 		},
 	}
