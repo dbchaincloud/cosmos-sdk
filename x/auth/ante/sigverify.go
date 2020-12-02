@@ -3,6 +3,7 @@ package ante
 import (
 	"bytes"
 	"encoding/hex"
+	"github.com/tendermint/tendermint/crypto/sm2"
 
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/ed25519"
@@ -302,6 +303,10 @@ func DefaultSigVerificationGasConsumer(
 
 	case secp256k1.PubKeySecp256k1:
 		meter.ConsumeGas(params.SigVerifyCostSecp256k1, "ante verify: secp256k1")
+		return nil
+	//add sm2
+	case sm2.PubKeySm2:
+		meter.ConsumeGas(params.SigVerifyCostSm2, "ante verify: sm2")
 		return nil
 
 	case multisig.PubKeyMultisigThreshold:
