@@ -1,5 +1,7 @@
 package keys
 
+import "github.com/tendermint/tendermint/crypto/algo"
+
 // SigningAlgo defines an algorithm to derive key-pairs which can be used for cryptographic signing.
 type SigningAlgo string
 
@@ -18,4 +20,13 @@ const (
 )
 
 //set global Algo type
-var Algo = Sm2
+var Algo = func()SigningAlgo{
+	KeyType := algo.GetPubKeyType()
+	switch KeyType {
+	case algo.SM2:
+		return Sm2
+	case algo.ED25519:
+		return Ed25519
+	}
+	return Secp256k1
+}()

@@ -5,13 +5,12 @@ package gov
 import (
 	"bytes"
 	"errors"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"log"
 	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto"
 
@@ -215,9 +214,9 @@ func badProposalHandler(ctx sdk.Context, c types.Content) error {
 
 var (
 	pubkeys = []crypto.PubKey{
-		ed25519.GenPrivKey().PubKey(),
-		ed25519.GenPrivKey().PubKey(),
-		ed25519.GenPrivKey().PubKey(),
+		algo.GenPrivKey().PubKey(),
+		algo.GenPrivKey().PubKey(),
+		algo.GenPrivKey().PubKey(),
 	}
 )
 
