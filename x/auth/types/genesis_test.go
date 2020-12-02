@@ -2,17 +2,16 @@ package types
 
 import (
 	"encoding/json"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/exported"
+	"github.com/stretchr/testify/require"
 )
 
 func TestSanitize(t *testing.T) {
-	addr1 := sdk.AccAddress(ed25519.GenPrivKey().PubKey().Address())
+	addr1 := sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
 	authAcc1 := NewBaseAccountWithAddress(addr1)
 	authAcc1.SetCoins(sdk.Coins{
 		sdk.NewInt64Coin("bcoin", 150),
@@ -20,7 +19,7 @@ func TestSanitize(t *testing.T) {
 	})
 	authAcc1.SetAccountNumber(1)
 
-	addr2 := sdk.AccAddress(ed25519.GenPrivKey().PubKey().Address())
+	addr2 := sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
 	authAcc2 := NewBaseAccountWithAddress(addr2)
 	authAcc2.SetCoins(sdk.Coins{
 		sdk.NewInt64Coin("acoin", 150),
@@ -42,8 +41,8 @@ func TestSanitize(t *testing.T) {
 }
 
 var (
-	pk1   = ed25519.GenPrivKey().PubKey()
-	pk2   = ed25519.GenPrivKey().PubKey()
+	pk1   = algo.GenPrivKey().PubKey()
+	pk2   = algo.GenPrivKey().PubKey()
 	addr1 = sdk.ValAddress(pk1.Address())
 	addr2 = sdk.ValAddress(pk2.Address())
 )

@@ -1,16 +1,15 @@
 package types
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/stretchr/testify/require"
 )
 
-var addr = sdk.AccAddress(ed25519.GenPrivKey().PubKey().Address())
+var addr = sdk.AccAddress(algo.GenPrivKey().PubKey().Address())
 
 func TestProposalKeys(t *testing.T) {
 	// key proposal

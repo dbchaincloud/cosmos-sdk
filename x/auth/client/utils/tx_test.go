@@ -3,13 +3,12 @@ package utils
 import (
 	"encoding/json"
 	"errors"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"io/ioutil"
 	"os"
 	"testing"
 
 	"github.com/stretchr/testify/require"
-
-	"github.com/tendermint/tendermint/crypto/ed25519"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -17,7 +16,7 @@ import (
 )
 
 var (
-	priv = ed25519.GenPrivKey()
+	priv = algo.GenPrivKey()
 	addr = sdk.AccAddress(priv.PubKey().Address())
 )
 

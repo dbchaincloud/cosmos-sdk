@@ -31,7 +31,7 @@ func TestLazyKeyManagement(t *testing.T) {
 	defer cleanup()
 	kb := New("keybasename", dir)
 
-	algo := Secp256k1
+	algo := Algo
 	n1, n2, n3 := "personal", "business", "other"
 	p1, p2 := nums, "really-secure!@#$"
 
@@ -113,7 +113,7 @@ func TestLazySignVerify(t *testing.T) {
 	dir, cleanup := tests.NewTestCaseDir(t)
 	defer cleanup()
 	kb := New("keybasename", dir)
-	algo := Secp256k1
+	algo := Algo
 
 	n1, n2, n3 := "some dude", "a dudette", "dude-ish"
 	p1, p2, p3 := nums, foobar, foobar
@@ -189,7 +189,7 @@ func TestLazyExportImport(t *testing.T) {
 	defer cleanup()
 	kb := New("keybasename", dir)
 
-	info, _, err := kb.CreateMnemonic("john", English, "secretcpw", Secp256k1)
+	info, _, err := kb.CreateMnemonic("john", English, "secretcpw", Algo)
 	require.NoError(t, err)
 	require.Equal(t, info.GetName(), "john")
 
@@ -217,7 +217,7 @@ func TestLazyExportImportPrivKey(t *testing.T) {
 	defer cleanup()
 	kb := New("keybasename", dir)
 
-	info, _, err := kb.CreateMnemonic("john", English, "secretcpw", Secp256k1)
+	info, _, err := kb.CreateMnemonic("john", English, "secretcpw", Algo)
 	require.NoError(t, err)
 	require.Equal(t, info.GetName(), "john")
 	priv1, err := kb.Get("john")
@@ -245,7 +245,7 @@ func TestLazyExportImportPubKey(t *testing.T) {
 	dir, cleanup := tests.NewTestCaseDir(t)
 	defer cleanup()
 	kb := New("keybasename", dir)
-	algo := Secp256k1
+	algo := Algo
 
 	// CreateMnemonic a private-public key pair and ensure consistency
 	notPasswd := "n9y25ah7"
@@ -286,7 +286,7 @@ func TestLazyExportPrivateKeyObject(t *testing.T) {
 	defer cleanup()
 	kb := New("keybasename", dir)
 
-	info, _, err := kb.CreateMnemonic("john", English, "secretcpw", Secp256k1)
+	info, _, err := kb.CreateMnemonic("john", English, "secretcpw", Algo)
 	require.NoError(t, err)
 	require.Equal(t, info.GetName(), "john")
 
@@ -303,7 +303,7 @@ func TestLazyAdvancedKeyManagement(t *testing.T) {
 	defer cleanup()
 	kb := New("keybasename", dir)
 
-	algo := Secp256k1
+	algo := Algo
 	n1, n2 := "old-name", "new name"
 	p1, p2 := nums, foobar
 
@@ -351,7 +351,7 @@ func TestLazySeedPhrase(t *testing.T) {
 	defer cleanup()
 	kb := New("keybasename", dir)
 
-	algo := Secp256k1
+	algo := Algo
 	n1, n2 := "lost-key", "found-again"
 	p1, p2 := nums, foobar
 
@@ -433,7 +433,7 @@ func TestKeygenOverride(t *testing.T) {
 	testName, pw := "name", "testPassword"
 
 	// create new key which will generate with
-	info, _, err := kb.CreateMnemonic(testName, English, pw, Secp256k1)
+	info, _, err := kb.CreateMnemonic(testName, English, pw, Algo)
 	require.NoError(t, err)
 	require.Equal(t, info.GetName(), testName)
 

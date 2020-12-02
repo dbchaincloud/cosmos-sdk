@@ -2,9 +2,8 @@ package staking
 
 import (
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/tendermint/tendermint/crypto/ed25519"
 
 	"github.com/stretchr/testify/assert"
 
@@ -101,7 +100,7 @@ func TestInitGenesisLargeValidatorSet(t *testing.T) {
 
 func TestValidateGenesis(t *testing.T) {
 	genValidators1 := make([]types.Validator, 1, 5)
-	pk := ed25519.GenPrivKey().PubKey()
+	pk := algo.GenPrivKey().PubKey()
 	genValidators1[0] = types.NewValidator(sdk.ValAddress(pk.Address()), pk, types.NewDescription("", "", "", "", ""))
 	genValidators1[0].Tokens = sdk.OneInt()
 	genValidators1[0].DelegatorShares = sdk.OneDec()

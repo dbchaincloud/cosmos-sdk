@@ -1,6 +1,7 @@
 package crypto
 
 import (
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"os"
 	"testing"
 
@@ -56,10 +57,12 @@ func ExamplePrintRegisteredTypes() {
 	//| PubKeyEd25519 | tendermint/PubKeyEd25519 | 0x1624DE64 | 0x20 |  |
 	//| PubKeySr25519 | tendermint/PubKeySr25519 | 0x0DFB1005 | 0x20 |  |
 	//| PubKeySecp256k1 | tendermint/PubKeySecp256k1 | 0xEB5AE987 | 0x21 |  |
+	//| PubKeySm2 | tendermint/PubKeySm2 | 0x4EA4D0AF | 0x21 |  |
 	//| PubKeyMultisigThreshold | tendermint/PubKeyMultisigThreshold | 0x22C1F7E2 | variable |  |
 	//| PrivKeyEd25519 | tendermint/PrivKeyEd25519 | 0xA3288910 | 0x40 |  |
 	//| PrivKeySr25519 | tendermint/PrivKeySr25519 | 0x2F82D78B | 0x20 |  |
 	//| PrivKeySecp256k1 | tendermint/PrivKeySecp256k1 | 0xE1B0F79B | 0x20 |  |
+	//| PrivKeySm2 | tendermint/PrivKeySm2 | 0xA9B24562 | 0x20 |  |
 }
 
 func TestKeyEncodings(t *testing.T) {
@@ -74,6 +77,11 @@ func TestKeyEncodings(t *testing.T) {
 		},
 		{
 			privKey:  secp256k1.GenPrivKey(),
+			privSize: 37,
+			pubSize:  38,
+		},
+		{
+			privKey:  sm2.GenPrivKey(),
 			privSize: 37,
 			pubSize:  38,
 		},

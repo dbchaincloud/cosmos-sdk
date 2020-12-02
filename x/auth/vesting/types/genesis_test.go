@@ -1,19 +1,18 @@
 package types
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/exported"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/stretchr/testify/require"
 )
 
 var (
-	pk1   = ed25519.GenPrivKey().PubKey()
-	pk2   = ed25519.GenPrivKey().PubKey()
+	pk1   = algo.GenPrivKey().PubKey()
+	pk2   = algo.GenPrivKey().PubKey()
 	addr1 = sdk.ValAddress(pk1.Address())
 	addr2 = sdk.ValAddress(pk2.Address())
 )

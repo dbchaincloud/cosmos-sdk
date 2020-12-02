@@ -3,18 +3,17 @@ package keys
 
 import (
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-
 	"github.com/cosmos/cosmos-sdk/crypto/keys/hd"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/tendermint/tendermint/crypto"
+	"github.com/tendermint/tendermint/crypto/ed25519"
 )
 
 func init() {
@@ -28,7 +27,7 @@ const (
 
 func TestLanguage(t *testing.T) {
 	kb := NewInMemory()
-	_, _, err := kb.CreateMnemonic("something", Japanese, "no_pass", Secp256k1)
+	_, _, err := kb.CreateMnemonic("something", Japanese, "no_pass", Algo)
 	assert.Error(t, err)
 	assert.Equal(t, "unsupported language: only english is supported", err.Error())
 }
@@ -38,7 +37,7 @@ func TestCreateAccountInvalidMnemonic(t *testing.T) {
 	_, err := kb.CreateAccount(
 		"some_account",
 		"malarkey pair crucial catch public canyon evil outer stage ten gym tornado",
-		"", "", CreateHDPath(0, 0).String(), Secp256k1)
+		"", "", CreateHDPath(0, 0).String(), Algo)
 	assert.Error(t, err)
 	assert.Equal(t, "Invalid mnemonic", err.Error())
 }
@@ -59,7 +58,7 @@ func TestCreateLedgerUnsupportedAlgo(t *testing.T) {
 }
 
 func TestCreateLedger(t *testing.T) {
-	kb := NewInMemory(WithSupportedAlgosLedger([]SigningAlgo{Secp256k1, Ed25519}))
+	kb := NewInMemory(WithSupportedAlgosLedger([]SigningAlgo{Secp256k1, Ed25519,Algo}))
 
 	// test_cover and test_unit will result in different answers
 	// test_cover does not compile some dependencies so ledger is disabled
@@ -68,9 +67,11 @@ func TestCreateLedger(t *testing.T) {
 	supportedLedgerAlgos := kb.SupportedAlgosLedger()
 	secpSupported := false
 	edSupported := false
+	sm2Supported  := false
 	for _, supportedAlgo := range supportedLedgerAlgos {
 		secpSupported = secpSupported || (supportedAlgo == Secp256k1)
 		edSupported = edSupported || (supportedAlgo == Ed25519)
+		sm2Supported = sm2Supported || (supportedAlgo == Sm2)
 	}
 	assert.True(t, secpSupported)
 	assert.True(t, edSupported)
@@ -210,7 +211,7 @@ func TestKeyManagement(t *testing.T) {
 // signatures
 func TestSignVerify(t *testing.T) {
 	cstore := NewInMemory()
-	algo := Secp256k1
+	algo := Algo
 
 	n1, n2, n3 := "some dude", "a dudette", "dude-ish"
 	p1, p2, p3 := nums, foobar, foobar
@@ -294,7 +295,7 @@ func TestExportImport(t *testing.T) {
 	// make the storage with reasonable defaults
 	cstore := NewInMemory()
 
-	info, _, err := cstore.CreateMnemonic("john", English, "secretcpw", Secp256k1)
+	info, _, err := cstore.CreateMnemonic("john", English, "secretcpw", Algo)
 	require.NoError(t, err)
 	require.Equal(t, info.GetName(), "john")
 
@@ -324,7 +325,7 @@ func TestExportImportPubKey(t *testing.T) {
 
 	// CreateMnemonic a private-public key pair and ensure consistency
 	notPasswd := "n9y25ah7"
-	info, _, err := cstore.CreateMnemonic("john", English, notPasswd, Secp256k1)
+	info, _, err := cstore.CreateMnemonic("john", English, notPasswd, Algo)
 	require.Nil(t, err)
 	require.NotEqual(t, info, "")
 	require.Equal(t, info.GetName(), "john")
@@ -361,7 +362,7 @@ func TestAdvancedKeyManagement(t *testing.T) {
 	// make the storage with reasonable defaults
 	cstore := NewInMemory()
 
-	algo := Secp256k1
+	algo := Algo
 	n1, n2 := "old-name", "new name"
 	p1, p2 := nums, foobar
 
@@ -409,7 +410,7 @@ func TestSeedPhrase(t *testing.T) {
 	// make the storage with reasonable defaults
 	cstore := NewInMemory()
 
-	algo := Secp256k1
+	algo := Algo
 	n1, n2 := "lost-key", "found-again"
 	p1, p2 := nums, foobar
 
@@ -428,7 +429,7 @@ func TestSeedPhrase(t *testing.T) {
 	// let us re-create it from the mnemonic-phrase
 	params := *hd.NewFundraiserParams(0, sdk.CoinType, 0)
 	hdPath := params.String()
-	newInfo, err := cstore.CreateAccount(n2, mnemonic, DefaultBIP39Passphrase, p2, hdPath, Secp256k1)
+	newInfo, err := cstore.CreateAccount(n2, mnemonic, DefaultBIP39Passphrase, p2, hdPath, Algo)
 	require.NoError(t, err)
 	require.Equal(t, n2, newInfo.GetName())
 	require.Equal(t, info.GetPubKey().Address(), newInfo.GetPubKey().Address())
@@ -440,11 +441,11 @@ func ExampleNew() {
 	customKeyGenFunc := func(bz []byte, algo SigningAlgo) (crypto.PrivKey, error) {
 		var bzArr [32]byte
 		copy(bzArr[:], bz)
-		return secp256k1.PrivKeySecp256k1(bzArr), nil
+		return sm2.PrivKeySm2(bzArr), nil
 	}
 	cstore := NewInMemory(WithKeygenFunc(customKeyGenFunc))
 
-	sec := Secp256k1
+	sec := Sm2
 
 	// Add keys and see they return in alphabetical order
 	bob, _, err := cstore.CreateMnemonic("Bob", English, "friend", sec)

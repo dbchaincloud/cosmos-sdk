@@ -2,19 +2,18 @@ package types
 
 import (
 	"encoding/hex"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"math/big"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/stretchr/testify/assert"
 )
 
 var (
-	keysPK1   = ed25519.GenPrivKeyFromSecret([]byte{1}).PubKey()
-	keysPK2   = ed25519.GenPrivKeyFromSecret([]byte{2}).PubKey()
-	keysPK3   = ed25519.GenPrivKeyFromSecret([]byte{3}).PubKey()
+	keysPK1   = algo.GenPrivKeyFromSecret([]byte{1}).PubKey()
+	keysPK2   = algo.GenPrivKeyFromSecret([]byte{2}).PubKey()
+	keysPK3   = algo.GenPrivKeyFromSecret([]byte{3}).PubKey()
 	keysAddr1 = keysPK1.Address()
 	keysAddr2 = keysPK2.Address()
 	keysAddr3 = keysPK3.Address()
@@ -35,10 +34,10 @@ func TestGetValidatorPowerRank(t *testing.T) {
 		validator Validator
 		wantHex   string
 	}{
-		{val1, "2300000000000000009c288ede7df62742fc3b7d0962045a8cef0f79f6"},
-		{val2, "2300000000000000019c288ede7df62742fc3b7d0962045a8cef0f79f6"},
-		{val3, "23000000000000000a9c288ede7df62742fc3b7d0962045a8cef0f79f6"},
-		{val4, "2300000100000000009c288ede7df62742fc3b7d0962045a8cef0f79f6"},
+		{val1, "230000000000000000921b19ffe0d5cc11a7997e0fe49f9c00dbd709dd"},
+		{val2, "230000000000000001921b19ffe0d5cc11a7997e0fe49f9c00dbd709dd"},
+		{val3, "23000000000000000a921b19ffe0d5cc11a7997e0fe49f9c00dbd709dd"},
+		{val4, "230000010000000000921b19ffe0d5cc11a7997e0fe49f9c00dbd709dd"},
 	}
 	for i, tt := range tests {
 		got := hex.EncodeToString(getValidatorPowerRank(tt.validator))
@@ -55,11 +54,11 @@ func TestGetREDByValDstIndexKey(t *testing.T) {
 		wantHex    string
 	}{
 		{sdk.AccAddress(keysAddr1), sdk.ValAddress(keysAddr1), sdk.ValAddress(keysAddr1),
-			"3663d771218209d8bd03c482f69dfba57310f0860963d771218209d8bd03c482f69dfba57310f0860963d771218209d8bd03c482f69dfba57310f08609"},
+			"366de4e6001f2a33ee586681f01b6063ff2428f6226de4e6001f2a33ee586681f01b6063ff2428f6226de4e6001f2a33ee586681f01b6063ff2428f622"},
 		{sdk.AccAddress(keysAddr1), sdk.ValAddress(keysAddr2), sdk.ValAddress(keysAddr3),
-			"363ab62f0d93849be495e21e3e9013a517038f45bd63d771218209d8bd03c482f69dfba57310f086095ef3b5f25c54946d4a89fc0d09d2f126614540f2"},
+			"367290ae649388e4836a47cb17f66842eb784e258d6de4e6001f2a33ee586681f01b6063ff2428f622ea6f3747a349f2ac37d026630f5f56d64010e979"},
 		{sdk.AccAddress(keysAddr2), sdk.ValAddress(keysAddr1), sdk.ValAddress(keysAddr3),
-			"363ab62f0d93849be495e21e3e9013a517038f45bd5ef3b5f25c54946d4a89fc0d09d2f126614540f263d771218209d8bd03c482f69dfba57310f08609"},
+			"367290ae649388e4836a47cb17f66842eb784e258dea6f3747a349f2ac37d026630f5f56d64010e9796de4e6001f2a33ee586681f01b6063ff2428f622"},
 	}
 	for i, tt := range tests {
 		got := hex.EncodeToString(GetREDByValDstIndexKey(tt.delAddr, tt.valSrcAddr, tt.valDstAddr))
@@ -76,11 +75,11 @@ func TestGetREDByValSrcIndexKey(t *testing.T) {
 		wantHex    string
 	}{
 		{sdk.AccAddress(keysAddr1), sdk.ValAddress(keysAddr1), sdk.ValAddress(keysAddr1),
-			"3563d771218209d8bd03c482f69dfba57310f0860963d771218209d8bd03c482f69dfba57310f0860963d771218209d8bd03c482f69dfba57310f08609"},
+			"356de4e6001f2a33ee586681f01b6063ff2428f6226de4e6001f2a33ee586681f01b6063ff2428f6226de4e6001f2a33ee586681f01b6063ff2428f622"},
 		{sdk.AccAddress(keysAddr1), sdk.ValAddress(keysAddr2), sdk.ValAddress(keysAddr3),
-			"355ef3b5f25c54946d4a89fc0d09d2f126614540f263d771218209d8bd03c482f69dfba57310f086093ab62f0d93849be495e21e3e9013a517038f45bd"},
+			"35ea6f3747a349f2ac37d026630f5f56d64010e9796de4e6001f2a33ee586681f01b6063ff2428f6227290ae649388e4836a47cb17f66842eb784e258d"},
 		{sdk.AccAddress(keysAddr2), sdk.ValAddress(keysAddr1), sdk.ValAddress(keysAddr3),
-			"3563d771218209d8bd03c482f69dfba57310f086095ef3b5f25c54946d4a89fc0d09d2f126614540f23ab62f0d93849be495e21e3e9013a517038f45bd"},
+			"356de4e6001f2a33ee586681f01b6063ff2428f622ea6f3747a349f2ac37d026630f5f56d64010e9797290ae649388e4836a47cb17f66842eb784e258d"},
 	}
 	for i, tt := range tests {
 		got := hex.EncodeToString(GetREDByValSrcIndexKey(tt.delAddr, tt.valSrcAddr, tt.valDstAddr))

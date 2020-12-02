@@ -2,6 +2,7 @@ package keeper_test
 
 import (
 	"encoding/hex"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
@@ -82,7 +83,7 @@ func (suite *KeeperTestSuite) populateEvidence(ctx sdk.Context, numEvidence int)
 	evidence := make([]exported.Evidence, numEvidence)
 
 	for i := 0; i < numEvidence; i++ {
-		pk := ed25519.GenPrivKey()
+		pk := algo.GenPrivKey()
 		sv := types.TestVote{
 			ValidatorAddress: pk.PubKey().Address(),
 			Height:           int64(i),
@@ -121,7 +122,7 @@ func (suite *KeeperTestSuite) populateValidators(ctx sdk.Context) {
 
 func (suite *KeeperTestSuite) TestSubmitValidEvidence() {
 	ctx := suite.ctx.WithIsCheckTx(false)
-	pk := ed25519.GenPrivKey()
+	pk := algo.GenPrivKey()
 	sv := types.TestVote{
 		ValidatorAddress: pk.PubKey().Address(),
 		Height:           11,
@@ -149,7 +150,7 @@ func (suite *KeeperTestSuite) TestSubmitValidEvidence() {
 
 func (suite *KeeperTestSuite) TestSubmitValidEvidence_Duplicate() {
 	ctx := suite.ctx.WithIsCheckTx(false)
-	pk := ed25519.GenPrivKey()
+	pk := algo.GenPrivKey()
 	sv := types.TestVote{
 		ValidatorAddress: pk.PubKey().Address(),
 		Height:           11,
@@ -178,7 +179,7 @@ func (suite *KeeperTestSuite) TestSubmitValidEvidence_Duplicate() {
 
 func (suite *KeeperTestSuite) TestSubmitInvalidEvidence() {
 	ctx := suite.ctx.WithIsCheckTx(false)
-	pk := ed25519.GenPrivKey()
+	pk := algo.GenPrivKey()
 	e := types.TestEquivocationEvidence{
 		Power:      100,
 		TotalPower: 100000,

@@ -1,13 +1,12 @@
 package types_test
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
-
-	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 
 	"github.com/cosmos/cosmos-sdk/x/evidence/exported"
 	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
+	"github.com/stretchr/testify/require"
 )
 
 func TestDefaultGenesisState(t *testing.T) {
@@ -17,7 +16,7 @@ func TestDefaultGenesisState(t *testing.T) {
 }
 
 func TestGenesisStateValidate_Valid(t *testing.T) {
-	pk := ed25519.GenPrivKey()
+	pk := algo.GenPrivKey()
 
 	evidence := make([]exported.Evidence, 100)
 	for i := 0; i < 100; i++ {
@@ -44,7 +43,7 @@ func TestGenesisStateValidate_Valid(t *testing.T) {
 }
 
 func TestGenesisStateValidate_Invalid(t *testing.T) {
-	pk := ed25519.GenPrivKey()
+	pk := algo.GenPrivKey()
 
 	evidence := make([]exported.Evidence, 100)
 	for i := 0; i < 100; i++ {

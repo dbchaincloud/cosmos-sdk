@@ -1,6 +1,7 @@
 package types_test
 
 import (
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -8,11 +9,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 )
 
 func TestMsgSubmitEvidence(t *testing.T) {
-	pk := ed25519.GenPrivKey()
+	pk := algo.GenPrivKey()
 	sv := types.TestVote{
 		ValidatorAddress: pk.PubKey().Address(),
 		Height:           11,

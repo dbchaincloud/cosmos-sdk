@@ -3,15 +3,14 @@ package types_test
 import (
 	"encoding/hex"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"math/rand"
 	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 	yaml "gopkg.in/yaml.v2"
-
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 
 	"github.com/cosmos/cosmos-sdk/types"
 )
@@ -55,7 +54,7 @@ func TestEmptyAddresses(t *testing.T) {
 }
 
 func TestRandBech32PubkeyConsistency(t *testing.T) {
-	var pub ed25519.PubKeyEd25519
+	var pub sm2.PubKeySm2//ed25519.PubKeyEd25519
 
 	for i := 0; i < 1000; i++ {
 		rand.Read(pub[:])
@@ -96,7 +95,7 @@ func TestRandBech32PubkeyConsistency(t *testing.T) {
 }
 
 func TestYAMLMarshalers(t *testing.T) {
-	addr := secp256k1.GenPrivKey().PubKey().Address()
+	addr := algo.GenPrivKey().PubKey().Address()
 
 	acc := types.AccAddress(addr)
 	val := types.ValAddress(addr)
@@ -113,7 +112,7 @@ func TestYAMLMarshalers(t *testing.T) {
 }
 
 func TestRandBech32AccAddrConsistency(t *testing.T) {
-	var pub ed25519.PubKeyEd25519
+	var pub sm2.PubKeySm2
 
 	for i := 0; i < 1000; i++ {
 		rand.Read(pub[:])
@@ -148,7 +147,7 @@ func TestRandBech32AccAddrConsistency(t *testing.T) {
 }
 
 func TestValAddr(t *testing.T) {
-	var pub ed25519.PubKeyEd25519
+	var pub sm2.PubKeySm2
 
 	for i := 0; i < 20; i++ {
 		rand.Read(pub[:])
@@ -183,7 +182,7 @@ func TestValAddr(t *testing.T) {
 }
 
 func TestConsAddress(t *testing.T) {
-	var pub ed25519.PubKeyEd25519
+	var pub sm2.PubKeySm2
 
 	for i := 0; i < 20; i++ {
 		rand.Read(pub[:])
@@ -228,7 +227,7 @@ func RandString(n int) string {
 }
 
 func TestConfiguredPrefix(t *testing.T) {
-	var pub ed25519.PubKeyEd25519
+	var pub sm2.PubKeySm2
 	for length := 1; length < 10; length++ {
 		for times := 1; times < 20; times++ {
 			rand.Read(pub[:])
@@ -283,7 +282,7 @@ func TestConfiguredPrefix(t *testing.T) {
 }
 
 func TestAddressInterface(t *testing.T) {
-	var pub ed25519.PubKeyEd25519
+	var pub sm2.PubKeySm2
 	rand.Read(pub[:])
 
 	addrs := []types.Address{

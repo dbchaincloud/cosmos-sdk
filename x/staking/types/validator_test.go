@@ -2,6 +2,7 @@ package types
 
 import (
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"math/rand"
 	"reflect"
 	"sort"
@@ -9,7 +10,6 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	tmtypes "github.com/tendermint/tendermint/types"
 	yaml "gopkg.in/yaml.v2"
 
@@ -315,7 +315,7 @@ func TestValidatorsSortDeterminism(t *testing.T) {
 
 	// Create random validator slice
 	for i := range vals {
-		pk := ed25519.GenPrivKey().PubKey()
+		pk := algo.GenPrivKey().PubKey()
 		vals[i] = NewValidator(sdk.ValAddress(pk.Address()), pk, Description{})
 	}
 

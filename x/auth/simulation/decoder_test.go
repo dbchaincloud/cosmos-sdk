@@ -2,11 +2,11 @@ package simulation
 
 import (
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	tmkv "github.com/tendermint/tendermint/libs/kv"
 
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	delPk1   = ed25519.GenPrivKey().PubKey()
+	delPk1   = algo.GenPrivKey().PubKey()
 	delAddr1 = sdk.AccAddress(delPk1.Address())
 )
 

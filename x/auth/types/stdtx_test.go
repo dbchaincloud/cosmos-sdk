@@ -2,12 +2,12 @@ package types
 
 import (
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/log"
 	yaml "gopkg.in/yaml.v2"
 
@@ -17,7 +17,7 @@ import (
 )
 
 var (
-	priv = ed25519.GenPrivKey()
+	priv = algo.GenPrivKey()
 	addr = sdk.AccAddress(priv.PubKey().Address())
 )
 
