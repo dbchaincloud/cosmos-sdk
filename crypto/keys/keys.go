@@ -25,8 +25,10 @@ var Algo = func()SigningAlgo{
 	switch KeyType {
 	case algo.SM2:
 		return Sm2
-	case algo.ED25519:
-		return Ed25519
+	//ED25519 is not supported
+	//case algo.ED25519:
+	//	return Ed25519
+	default:
+		return Secp256k1
 	}
-	return Secp256k1
 }()
