@@ -14,10 +14,11 @@ package hd
 import (
 	"crypto/hmac"
 	"crypto/sha512"
-
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"math/big"
 	"strconv"
 	"strings"
@@ -209,16 +210,26 @@ func derivePrivateKey(privKeyBytes [32]byte, chainCode [32]byte, index uint32, h
 		index |= 0x80000000
 		data = append([]byte{byte(0)}, privKeyBytes[:]...)
 	} else {
-		// this can't return an error:
-		_, ecPub := btcec.PrivKeyFromBytes(btcec.S256(), privKeyBytes[:])
-		pubkeyBytes := ecPub.SerializeCompressed()
-		data = pubkeyBytes
 
-		/* By using btcec, we can remove the dependency on tendermint/crypto/secp256k1
-		pubkey := secp256k1.PrivKeySecp256k1(privKeyBytes).PubKey()
-		public := pubkey.(secp256k1.PubKeySecp256k1)
-		data = public[:]
-		*/
+		//add Sm2
+		if algo.Algo ==algo.SM2{
+			var sm2Priv sm2.PrivKeySm2
+			copy (sm2Priv[:],privKeyBytes[:])
+			pubkeyBytes := sm2Priv.PubKey().Bytes()
+			data = pubkeyBytes
+		}else{
+			// this can't return an error:
+			_, ecPub := btcec.PrivKeyFromBytes(btcec.S256(), privKeyBytes[:])
+			pubkeyBytes := ecPub.SerializeCompressed()
+			data = pubkeyBytes
+
+			/* By using btcec, we can remove the dependency on tendermint/crypto/secp256k1
+			pubkey := secp256k1.PrivKeySecp256k1(privKeyBytes).PubKey()
+			public := pubkey.(secp256k1.PubKeySecp256k1)
+			data = public[:]
+			*/
+		}
+
 	}
 	data = append(data, uint32ToBytes(index)...)
 	data2, chainCode2 := i64(chainCode[:], data)

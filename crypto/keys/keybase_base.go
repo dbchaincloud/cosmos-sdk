@@ -106,7 +106,7 @@ func SecpPrivKeyGen(bz []byte) tmcrypto.PrivKey {
 	copy(bzArr[:], bz)
 	return secp256k1.PrivKeySecp256k1(bzArr)
 }
-
+// Sm2PrivKeyGen generates a sm2 private key from the given bytes
 func Sm2PrivKeyGen(bz []byte) tmcrypto.PrivKey {
 	var bzArr sm2.PrivKeySm2
 
@@ -262,10 +262,8 @@ func (kb baseKeybase) writeMultisigKey(w infoWriter, name string, pub tmcrypto.P
 // StdDeriveKey is the default DeriveKey function in the keybase.
 // For now, it only supports Secp256k1
 func StdDeriveKey(mnemonic string, bip39Passphrase, hdPath string, algo SigningAlgo) ([]byte, error) {
-	if algo == Secp256k1 {
+	if algo == Secp256k1 || algo == Sm2 {
 		return SecpDeriveKey(mnemonic, bip39Passphrase, hdPath)
-	} else if algo == Sm2{ //add sm2
-		return Sm2DeriveKey(mnemonic, bip39Passphrase, hdPath)
 	}
 	return nil, ErrUnsupportedSigningAlgo
 }
@@ -283,18 +281,6 @@ func SecpDeriveKey(mnemonic string, bip39Passphrase, hdPath string) ([]byte, err
 	}
 	derivedKey, err := hd.DerivePrivateKeyForPath(masterPriv, ch, hdPath)
 	return derivedKey[:], err
-}
-
-// Sm2DeriveKey derives and returns the secp256k1 private key for the given seed
-func Sm2DeriveKey(mnemonic string, bip39Passphrase, hdPath string) ([]byte, error) {
-	seed, err := bip39.NewSeedWithErrorChecking(mnemonic, bip39Passphrase)
-	if err != nil {
-		return nil, err
-	}
-	seed = append(seed,hdPath...)
-	privSm2 := sm2.GenPrivKeySm2FromSecret(seed)
-
-	return privSm2[:], nil
 }
 
 // CreateHDPath returns BIP 44 object from account and index parameters.
