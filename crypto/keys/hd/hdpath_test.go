@@ -173,18 +173,18 @@ func ExampleSomeBIP32TestVecs() {
 
 	// Output: keys from fundraiser test-vector (cosmos, bitcoin, ether)
 	//
-	// bfcb217c058d8bbafd5e186eae936106ca3e943889b0b4a093ae13822fd3170c
-	// e77c3de76965ad89997451de97b95bb65ede23a6bf185a55d80363d92ee37c3d
-	// 7fc4d8a8146dea344ba04c593517d3f377fa6cded36cd55aee0a0bb968e651bc
+	// 4c2e449eb56b471cbd920b5c12b88367bded6660178082d91bafc5714e67da97
+	// 6b267c9be47575ced3495f6a498c46a5e49b14a378cfd6e2a65dca7997566361
+	// b2595f08ae281f076b32fa747b0b6bd99fe3f64e512f339e4742759a81df66ac
 	// INVALID
 	// INVALID
 	//
 	// keys generated via https://coinomi.com/recovery-phrase-tool.html
 	//
-	// a61f10c5fecf40c084c94fa54273b6f5d7989386be4a37669e6d6f7b0169c163
-	// 32c4599843de3ef161a629a461d12c60b009b676c35050be5f7ded3a3b23501f
+	// 11b1e5c554f2a4595b2c7dc3b966c6b8ca450ef1dc13e039c8f6719046bffb35
+	// b85e62de48af277a986a47c7d0310b13f5112d6bb320e2e243ddef428cd1e7b8
 	//
 	// BIP 32 example
 	//
-	// c4c11d8c03625515905d7e89d25dfc66126fbc629ecca6db489a1a72fc4bda78
+	// bfcf99c021e9db61b4d66ade727f23bf071f0ed082559336a956602f0cc08859
 }

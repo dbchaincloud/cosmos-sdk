@@ -213,10 +213,9 @@ func derivePrivateKey(privKeyBytes [32]byte, chainCode [32]byte, index uint32, h
 
 		//add Sm2
 		if algo.Algo ==algo.SM2{
-			var sm2Priv sm2.PrivKeySm2
-			copy (sm2Priv[:],privKeyBytes[:])
-			pubkeyBytes := sm2Priv.PubKey().Bytes()
-			data = pubkeyBytes
+			pubkey := sm2.PrivKeySm2(privKeyBytes).PubKey()
+			public := pubkey.(sm2.PubKeySm2)
+			data = public[:]
 		}else{
 			// this can't return an error:
 			_, ecPub := btcec.PrivKeyFromBytes(btcec.S256(), privKeyBytes[:])

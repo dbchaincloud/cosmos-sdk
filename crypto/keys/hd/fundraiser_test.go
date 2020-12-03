@@ -4,6 +4,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/tendermint/tendermint/crypto/sm2"
 	"io/ioutil"
 	"testing"
 
@@ -12,7 +13,6 @@ import (
 	bip39 "github.com/cosmos/go-bip39"
 
 	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 )
 
 type addrData struct {
@@ -59,7 +59,7 @@ func TestFundraiserCompatibility(t *testing.T) {
 		master, ch := ComputeMastersFromSeed(seed)
 		priv, err := DerivePrivateKeyForPath(master, ch, "44'/118'/0'/0/0")
 		require.NoError(t, err)
-		pub := secp256k1.PrivKeySecp256k1(priv).PubKey()
+		pub := sm2.PrivKeySm2(priv).PubKey()
 
 		t.Log("\tNODEJS GOLANG\n")
 		t.Logf("SEED \t%X %X\n", seedB, seed)
@@ -72,7 +72,7 @@ func TestFundraiserCompatibility(t *testing.T) {
 		require.Equal(t, priv[:], privB, "Expected priv keys to match")
 		var pubBFixed [33]byte
 		copy(pubBFixed[:], pubB)
-		require.Equal(t, pub, secp256k1.PubKeySecp256k1(pubBFixed), fmt.Sprintf("Expected pub keys to match for %d", i))
+		require.Equal(t, pub, sm2.PubKeySm2(pubBFixed), fmt.Sprintf("Expected pub keys to match for %d", i))
 
 		addr := pub.Address()
 		t.Logf("ADDR  \t%X %X\n", addrB, addr)
