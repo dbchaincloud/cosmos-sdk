@@ -8,10 +8,10 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/multisig"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/x/auth/exported"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
 )
 
 var (

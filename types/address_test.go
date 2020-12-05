@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/require"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 var invalidStrs = []string{

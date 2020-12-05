@@ -7,11 +7,11 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/slashing"
-	"github.com/cosmos/cosmos-sdk/x/staking"
-	"github.com/cosmos/cosmos-sdk/x/staking/exported"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/exported"
 )
 
 // ExportAppStateAndValidators exports the state of the application for a genesis

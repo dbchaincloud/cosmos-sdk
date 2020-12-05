@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/require"
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	keep "github.com/cosmos/cosmos-sdk/x/staking/keeper"
-	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	keep "github.com/dbchaincloud/cosmos-sdk/x/staking/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/types"
 )
 
 func TestInitGenesis(t *testing.T) {

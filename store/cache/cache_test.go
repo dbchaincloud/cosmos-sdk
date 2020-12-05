@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/store/cache"
-	iavlstore "github.com/cosmos/cosmos-sdk/store/iavl"
-	"github.com/cosmos/cosmos-sdk/store/types"
+	"github.com/dbchaincloud/cosmos-sdk/store/cache"
+	iavlstore "github.com/dbchaincloud/cosmos-sdk/store/iavl"
+	"github.com/dbchaincloud/cosmos-sdk/store/types"
 
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/iavl"

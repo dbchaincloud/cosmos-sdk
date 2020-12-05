@@ -6,9 +6,9 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/types/module"
 )
 
 // App implements the common methods for a Cosmos SDK-based application

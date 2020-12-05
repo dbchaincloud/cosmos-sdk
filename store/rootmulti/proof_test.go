@@ -7,8 +7,8 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/cosmos/cosmos-sdk/store/iavl"
-	"github.com/cosmos/cosmos-sdk/store/types"
+	"github.com/dbchaincloud/cosmos-sdk/store/iavl"
+	"github.com/dbchaincloud/cosmos-sdk/store/types"
 )
 
 func TestVerifyIAVLStoreQueryProof(t *testing.T) {

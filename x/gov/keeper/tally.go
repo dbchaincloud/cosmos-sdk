@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/cosmos/cosmos-sdk/x/staking/exported"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/gov/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/exported"
 )
 
 // TODO: Break into several smaller functions for clarity

@@ -3,11 +3,11 @@ package mock
 import (
 	"github.com/dbchaincloud/tendermint/crypto"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/supply"
-	"github.com/cosmos/cosmos-sdk/x/supply/exported"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/exported"
 )
 
 // DummySupplyKeeper defines a supply keeper used only for testing to avoid

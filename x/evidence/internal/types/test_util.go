@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/evidence/exported"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/evidence/exported"
 
 	"gopkg.in/yaml.v2"
 

@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/distribution/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/distribution/types"
 )
 
 var (

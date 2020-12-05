@@ -11,8 +11,8 @@ import (
 	ctypes "github.com/dbchaincloud/tendermint/rpc/core/types"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
 )
 
 type MockClient struct {

@@ -15,8 +15,8 @@ import (
 	"github.com/dbchaincloud/tendermint/libs/bech32"
 	"github.com/dbchaincloud/tendermint/libs/cli"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 func bech32Prefixes(config *sdk.Config) []string {

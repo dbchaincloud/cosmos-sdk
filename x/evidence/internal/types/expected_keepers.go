@@ -3,8 +3,8 @@ package types
 import (
 	"time"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	stakingexported "github.com/cosmos/cosmos-sdk/x/staking/exported"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	stakingexported "github.com/dbchaincloud/cosmos-sdk/x/staking/exported"
 
 	"github.com/dbchaincloud/tendermint/crypto"
 )

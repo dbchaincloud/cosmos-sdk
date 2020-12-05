@@ -8,7 +8,7 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto"
 	"github.com/dbchaincloud/tendermint/crypto/multisig"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 func TestBech32KeysOutput(t *testing.T) {

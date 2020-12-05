@@ -11,9 +11,9 @@ import (
 	tmcrypto "github.com/dbchaincloud/tendermint/crypto"
 	"github.com/dbchaincloud/tendermint/crypto/secp256k1"
 
-	"github.com/cosmos/cosmos-sdk/crypto"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/hd"
-	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/crypto"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys/hd"
+	"github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 type (

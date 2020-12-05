@@ -3,8 +3,8 @@ package bank
 // nolint
 
 import (
-	"github.com/cosmos/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/bank/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/bank/internal/types"
 )
 
 const (

@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
 )
 
-// For https://github.com/cosmos/cosmos-sdk/issues/3899
+// For https://github.com/dbchaincloud/cosmos-sdk/issues/3899
 func Test_runConfigCmdTwiceWithShorterNodeValue(t *testing.T) {
 	// Prepare environment
 	t.Parallel()

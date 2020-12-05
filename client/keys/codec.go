@@ -1,7 +1,7 @@
 package keys
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
 )
 
 // KeysCdc defines codec to be used with key operations

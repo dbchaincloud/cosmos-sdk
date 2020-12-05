@@ -4,7 +4,7 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/sm2"
 	"math/rand"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 	"github.com/dbchaincloud/tendermint/crypto"
 )
 

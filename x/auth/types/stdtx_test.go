@@ -11,9 +11,9 @@ import (
 	"github.com/dbchaincloud/tendermint/libs/log"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
 )
 
 var (

@@ -12,9 +12,9 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/algo"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	keep "github.com/cosmos/cosmos-sdk/x/staking/keeper"
-	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	keep "github.com/dbchaincloud/cosmos-sdk/x/staking/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/types"
 )
 
 func TestValidatorByPowerIndex(t *testing.T) {

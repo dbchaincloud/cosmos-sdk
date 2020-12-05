@@ -11,7 +11,7 @@ import (
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 type (

@@ -8,10 +8,10 @@ import (
 
 	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/types"
 )
 
 func makeTestCodec() (cdc *codec.Codec) {

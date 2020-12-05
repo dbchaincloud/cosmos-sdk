@@ -10,7 +10,7 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	"github.com/dbchaincloud/tendermint/libs/log"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 func mustParseTime(s string) time.Time {

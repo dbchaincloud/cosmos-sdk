@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	keep "github.com/cosmos/cosmos-sdk/x/mint/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/mint/internal/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	keep "github.com/dbchaincloud/cosmos-sdk/x/mint/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/mint/internal/types"
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 )

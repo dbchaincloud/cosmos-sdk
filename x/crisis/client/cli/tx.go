@@ -6,14 +6,14 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
-	"github.com/cosmos/cosmos-sdk/x/crisis/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/client"
+	"github.com/dbchaincloud/cosmos-sdk/client/context"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/client/utils"
+	"github.com/dbchaincloud/cosmos-sdk/x/crisis/internal/types"
 )
 
 // command to replace a delegator's withdrawal address

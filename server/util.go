@@ -20,10 +20,10 @@ import (
 	tmflags "github.com/dbchaincloud/tendermint/libs/cli/flags"
 	"github.com/dbchaincloud/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/server/config"
-	"github.com/cosmos/cosmos-sdk/version"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/server/config"
+	"github.com/dbchaincloud/cosmos-sdk/version"
 )
 
 // server context

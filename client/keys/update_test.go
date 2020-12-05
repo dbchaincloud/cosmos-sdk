@@ -6,9 +6,9 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	"github.com/cosmos/cosmos-sdk/tests"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	"github.com/dbchaincloud/cosmos-sdk/tests"
 )
 
 func Test_updateKeyCommand(t *testing.T) {

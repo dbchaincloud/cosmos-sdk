@@ -11,10 +11,10 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/multisig"
 	"github.com/dbchaincloud/tendermint/libs/cli"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/crypto"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/crypto"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 const (

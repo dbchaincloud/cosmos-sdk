@@ -3,9 +3,9 @@ package staking
 // nolint
 
 import (
-	"github.com/cosmos/cosmos-sdk/x/staking/exported"
-	"github.com/cosmos/cosmos-sdk/x/staking/keeper"
-	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/types"
 )
 
 const (

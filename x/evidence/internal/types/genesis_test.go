@@ -4,8 +4,8 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/x/evidence/exported"
-	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/evidence/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/evidence/internal/types"
 	"github.com/stretchr/testify/require"
 )
 

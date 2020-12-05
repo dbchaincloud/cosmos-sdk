@@ -7,9 +7,9 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/tmhash"
 	"github.com/dbchaincloud/tendermint/mempool"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
 )
 
 // BroadcastTx broadcasts a transactions either synchronously or asynchronously

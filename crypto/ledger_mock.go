@@ -14,9 +14,9 @@ import (
 
 	bip39 "github.com/cosmos/go-bip39"
 
-	"github.com/cosmos/cosmos-sdk/crypto/keys/hd"
-	"github.com/cosmos/cosmos-sdk/tests"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys/hd"
+	"github.com/dbchaincloud/cosmos-sdk/tests"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 // If ledger support (build tag) has been enabled, which implies a CGO dependency,

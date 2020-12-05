@@ -6,9 +6,9 @@ import (
 
 	"github.com/dbchaincloud/tendermint/crypto"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/simulation"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth"
+	"github.com/dbchaincloud/cosmos-sdk/x/simulation"
 )
 
 // SimAppChainID hardcoded chainID for simulation

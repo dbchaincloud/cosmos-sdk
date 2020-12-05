@@ -6,9 +6,9 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/types/rest"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/context"
+	"github.com/dbchaincloud/cosmos-sdk/types/rest"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/types"
 )
 
 // RegisterRoutes registers staking-related REST handlers to a router

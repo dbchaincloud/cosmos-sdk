@@ -5,10 +5,10 @@ import (
 
 	"github.com/dbchaincloud/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/supply/exported"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/types"
 )
 
 // Keeper of the supply store

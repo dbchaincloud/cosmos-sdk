@@ -19,17 +19,17 @@ import (
 	tmos "github.com/dbchaincloud/tendermint/libs/os"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	"github.com/cosmos/cosmos-sdk/server"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
-	"github.com/cosmos/cosmos-sdk/x/genutil"
-	"github.com/cosmos/cosmos-sdk/x/genutil/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/context"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	"github.com/dbchaincloud/cosmos-sdk/server"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/types/module"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/client/utils"
+	"github.com/dbchaincloud/cosmos-sdk/x/genutil"
+	"github.com/dbchaincloud/cosmos-sdk/x/genutil/types"
 )
 
 // StakingMsgBuildingHelpers helpers for message building gen-tx command

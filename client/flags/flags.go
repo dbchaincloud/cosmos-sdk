@@ -10,7 +10,7 @@ import (
 
 	tmcli "github.com/dbchaincloud/tendermint/libs/cli"
 
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
 )
 
 // nolint

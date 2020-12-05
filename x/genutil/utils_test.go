@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cosmos/cosmos-sdk/tests"
+	"github.com/dbchaincloud/cosmos-sdk/tests"
 
 	"github.com/stretchr/testify/require"
 )

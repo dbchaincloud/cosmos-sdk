@@ -3,10 +3,10 @@
 package types
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	"github.com/cosmos/cosmos-sdk/x/params"
-	stakingexported "github.com/cosmos/cosmos-sdk/x/staking/exported"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authexported "github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/params"
+	stakingexported "github.com/dbchaincloud/cosmos-sdk/x/staking/exported"
 )
 
 // AccountKeeper expected account keeper

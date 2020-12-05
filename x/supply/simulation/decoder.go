@@ -6,9 +6,9 @@ import (
 
 	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/types"
 )
 
 // DecodeStore unmarshals the KVPair's Value to the corresponding supply type

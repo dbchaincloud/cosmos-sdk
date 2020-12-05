@@ -16,10 +16,10 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/multisig"
 	"github.com/dbchaincloud/tendermint/crypto/secp256k1"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/x/auth/ante"
-	"github.com/cosmos/cosmos-sdk/x/auth/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/ante"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/types"
 )
 
 // run the tx through the anteHandler and ensure its valid

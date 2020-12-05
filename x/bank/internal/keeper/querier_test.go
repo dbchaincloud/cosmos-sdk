@@ -8,10 +8,10 @@ import (
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	keep "github.com/cosmos/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/bank/internal/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
+	keep "github.com/dbchaincloud/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/bank/internal/types"
 )
 
 func TestBalances(t *testing.T) {

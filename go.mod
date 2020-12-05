@@ -1,6 +1,6 @@
 go 1.13
 
-module github.com/cosmos/cosmos-sdk
+module github.com/dbchaincloud/cosmos-sdk
 
 require (
 	github.com/99designs/keyring v1.1.3

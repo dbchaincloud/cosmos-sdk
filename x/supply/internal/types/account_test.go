@@ -9,9 +9,9 @@ import (
 
 	yaml "gopkg.in/yaml.v2"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authexported "github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
 
 	"github.com/stretchr/testify/require"
 )

@@ -3,10 +3,10 @@ package simapp
 import (
 	"errors"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/cosmos/cosmos-sdk/x/supply"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authexported "github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply"
 )
 
 var _ authexported.GenesisAccount = (*SimGenesisAccount)(nil)

@@ -10,16 +10,16 @@ import (
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	sim "github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/cosmos/cosmos-sdk/x/slashing/client/cli"
-	"github.com/cosmos/cosmos-sdk/x/slashing/client/rest"
-	"github.com/cosmos/cosmos-sdk/x/slashing/internal/types"
-	"github.com/cosmos/cosmos-sdk/x/slashing/simulation"
-	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/client/context"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/types/module"
+	sim "github.com/dbchaincloud/cosmos-sdk/x/simulation"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing/client/cli"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing/client/rest"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing/simulation"
+	stakingkeeper "github.com/dbchaincloud/cosmos-sdk/x/staking/keeper"
 )
 
 var (

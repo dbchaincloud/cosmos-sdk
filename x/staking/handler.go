@@ -6,10 +6,10 @@ import (
 	tmstrings "github.com/dbchaincloud/tendermint/libs/strings"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/x/staking/keeper"
-	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

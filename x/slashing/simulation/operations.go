@@ -4,15 +4,15 @@ import (
 	"errors"
 	"math/rand"
 
-	"github.com/cosmos/cosmos-sdk/baseapp"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/simapp/helpers"
-	simappparams "github.com/cosmos/cosmos-sdk/simapp/params"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/cosmos/cosmos-sdk/x/slashing/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/slashing/internal/types"
-	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/baseapp"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/simapp/helpers"
+	simappparams "github.com/dbchaincloud/cosmos-sdk/simapp/params"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/simulation"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/slashing/internal/types"
+	stakingkeeper "github.com/dbchaincloud/cosmos-sdk/x/staking/keeper"
 )
 
 // Simulation operation weights constants

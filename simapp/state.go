@@ -11,11 +11,11 @@ import (
 
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	simapparams "github.com/cosmos/cosmos-sdk/simapp/params"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/simulation"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	simapparams "github.com/dbchaincloud/cosmos-sdk/simapp/params"
+	"github.com/dbchaincloud/cosmos-sdk/types/module"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth"
+	"github.com/dbchaincloud/cosmos-sdk/x/simulation"
 )
 
 // AppStateFn returns the initial application state using a genesis or the simulation parameters.

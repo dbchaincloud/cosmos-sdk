@@ -10,10 +10,10 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/ed25519"
 	tmamino "github.com/dbchaincloud/tendermint/crypto/encoding/amino"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/hd"
-	"github.com/cosmos/cosmos-sdk/tests"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys/hd"
+	"github.com/dbchaincloud/cosmos-sdk/tests"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 func TestNew(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
+	stakingtypes "github.com/dbchaincloud/cosmos-sdk/x/staking/types"
 	"github.com/stretchr/testify/require"
 )
 

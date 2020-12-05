@@ -8,9 +8,9 @@ import (
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/x/auth/exported"
-	keep "github.com/cosmos/cosmos-sdk/x/auth/keeper"
-	"github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	keep "github.com/dbchaincloud/cosmos-sdk/x/auth/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/types"
 )
 
 func TestQueryAccount(t *testing.T) {

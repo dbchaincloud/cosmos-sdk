@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	params "github.com/cosmos/cosmos-sdk/x/params/subspace"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	params "github.com/dbchaincloud/cosmos-sdk/x/params/subspace"
 )
 
 // Default period for deposits & voting

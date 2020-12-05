@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cosmos/cosmos-sdk/simapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/dbchaincloud/cosmos-sdk/simapp"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
 
 	"github.com/stretchr/testify/require"
 	"github.com/dbchaincloud/tendermint/crypto"

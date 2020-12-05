@@ -13,7 +13,7 @@ import (
 
 	tmos "github.com/dbchaincloud/tendermint/libs/os"
 
-	"github.com/cosmos/cosmos-sdk/crypto/keys/keyerror"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys/keyerror"
 )
 
 const (

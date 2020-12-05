@@ -7,11 +7,11 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto"
 	"gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	vestexported "github.com/cosmos/cosmos-sdk/x/auth/vesting/exported"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authexported "github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
+	vestexported "github.com/dbchaincloud/cosmos-sdk/x/auth/vesting/exported"
 )
 
 // Compile-time type assertions

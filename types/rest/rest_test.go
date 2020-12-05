@@ -11,9 +11,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/context"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 	"github.com/dbchaincloud/tendermint/crypto"
 )

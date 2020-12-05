@@ -1,9 +1,9 @@
 package supply
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	authexported "github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply/internal/types"
 )
 
 // InitGenesis sets supply information for genesis.

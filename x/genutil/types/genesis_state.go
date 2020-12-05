@@ -8,9 +8,9 @@ import (
 	tmos "github.com/dbchaincloud/tendermint/libs/os"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	authtypes "github.com/dbchaincloud/cosmos-sdk/x/auth/types"
+	stakingtypes "github.com/dbchaincloud/cosmos-sdk/x/staking/types"
 )
 
 // GenesisState defines the raw genesis transaction in JSON

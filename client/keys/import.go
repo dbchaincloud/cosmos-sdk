@@ -7,10 +7,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/input"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/client/input"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 // ImportKeyCommand imports private keys from a keyfile.

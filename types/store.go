@@ -3,8 +3,8 @@ package types
 import (
 	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/store/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/store/types"
 )
 
 // nolint - reexport

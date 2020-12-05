@@ -10,10 +10,10 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/simapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	genutilcli "github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/simapp"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	genutilcli "github.com/dbchaincloud/cosmos-sdk/x/genutil/client/cli"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -22,9 +22,9 @@ import (
 	"github.com/dbchaincloud/tendermint/libs/cli"
 	"github.com/dbchaincloud/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/cosmos/cosmos-sdk/tests"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/server"
+	"github.com/dbchaincloud/cosmos-sdk/tests"
 )
 
 // custom tx codec

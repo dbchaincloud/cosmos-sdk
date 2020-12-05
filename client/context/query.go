@@ -14,8 +14,8 @@ import (
 	rpcclient "github.com/dbchaincloud/tendermint/rpc/client"
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/store/rootmulti"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/store/rootmulti"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 // GetNode returns an RPC client. If the context's client is not defined, an

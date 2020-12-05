@@ -3,8 +3,8 @@ package mint
 // nolint
 
 import (
-	"github.com/cosmos/cosmos-sdk/x/mint/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/mint/internal/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/mint/internal/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/mint/internal/types"
 )
 
 const (

@@ -13,8 +13,8 @@ import (
 	tmtypes "github.com/dbchaincloud/tendermint/types"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 func TestValidatorTestEquivalent(t *testing.T) {

@@ -12,8 +12,8 @@ import (
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/store"
-	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/store"
+	"github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 type MockLogger struct {

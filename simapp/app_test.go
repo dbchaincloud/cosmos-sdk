@@ -8,7 +8,7 @@ import (
 	"github.com/dbchaincloud/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 )

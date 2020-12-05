@@ -3,10 +3,10 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 
-	"github.com/cosmos/cosmos-sdk/x/distribution/types"
-	"github.com/cosmos/cosmos-sdk/x/staking/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/distribution/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking/exported"
 )
 
 // initialize rewards for a new validator

@@ -8,8 +8,8 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	"github.com/dbchaincloud/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/store/gaskv"
-	stypes "github.com/cosmos/cosmos-sdk/store/types"
+	"github.com/dbchaincloud/cosmos-sdk/store/gaskv"
+	stypes "github.com/dbchaincloud/cosmos-sdk/store/types"
 )
 
 /*

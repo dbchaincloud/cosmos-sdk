@@ -11,9 +11,9 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto/multisig"
 	"github.com/dbchaincloud/tendermint/crypto/secp256k1"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth/ante"
-	"github.com/cosmos/cosmos-sdk/x/auth/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/ante"
+	"github.com/dbchaincloud/cosmos-sdk/x/auth/types"
 )
 
 func TestSetPubKey(t *testing.T) {

@@ -14,7 +14,7 @@ import (
 	ctypes "github.com/dbchaincloud/tendermint/rpc/core/types"
 	tmjsonrpc "github.com/dbchaincloud/tendermint/rpc/jsonrpc/client"
 
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
 )
 
 // Wait for the next tendermint block from the Tendermint RPC

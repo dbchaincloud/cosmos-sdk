@@ -5,7 +5,7 @@ import (
 
 	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
 
-	"github.com/cosmos/cosmos-sdk/store/types"
+	"github.com/dbchaincloud/cosmos-sdk/store/types"
 )
 
 // Gets the first item.

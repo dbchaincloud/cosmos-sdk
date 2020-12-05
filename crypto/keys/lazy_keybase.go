@@ -6,7 +6,7 @@ import (
 	"github.com/dbchaincloud/tendermint/crypto"
 	tmos "github.com/dbchaincloud/tendermint/libs/os"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 var _ Keybase = lazyKeybase{}

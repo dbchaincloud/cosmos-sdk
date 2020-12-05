@@ -3,7 +3,7 @@ package evidence
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	tmtypes "github.com/dbchaincloud/tendermint/types"

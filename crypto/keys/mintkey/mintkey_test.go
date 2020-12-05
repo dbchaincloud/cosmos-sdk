@@ -7,8 +7,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys/mintkey"
 	"github.com/stretchr/testify/require"
 	"github.com/dbchaincloud/tendermint/crypto/armor"
 	cryptoAmino "github.com/dbchaincloud/tendermint/crypto/encoding/amino"

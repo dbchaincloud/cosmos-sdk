@@ -14,16 +14,16 @@ import (
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	"github.com/dbchaincloud/tendermint/crypto"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	"github.com/cosmos/cosmos-sdk/x/bank"
-	keep "github.com/cosmos/cosmos-sdk/x/gov/keeper"
-	"github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/cosmos/cosmos-sdk/x/mock"
-	"github.com/cosmos/cosmos-sdk/x/staking"
-	"github.com/cosmos/cosmos-sdk/x/supply"
-	supplyexported "github.com/cosmos/cosmos-sdk/x/supply/exported"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	sdkerrors "github.com/dbchaincloud/cosmos-sdk/types/errors"
+	authexported "github.com/dbchaincloud/cosmos-sdk/x/auth/exported"
+	"github.com/dbchaincloud/cosmos-sdk/x/bank"
+	keep "github.com/dbchaincloud/cosmos-sdk/x/gov/keeper"
+	"github.com/dbchaincloud/cosmos-sdk/x/gov/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/mock"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply"
+	supplyexported "github.com/dbchaincloud/cosmos-sdk/x/supply/exported"
 )
 
 var (

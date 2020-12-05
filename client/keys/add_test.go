@@ -9,10 +9,10 @@ import (
 
 	"github.com/dbchaincloud/tendermint/libs/cli"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	"github.com/cosmos/cosmos-sdk/tests"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	"github.com/dbchaincloud/cosmos-sdk/tests"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 func Test_runAddCmdBasic(t *testing.T) {

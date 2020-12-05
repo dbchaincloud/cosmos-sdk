@@ -1,8 +1,8 @@
 # Cosmos SDK v0.39.1 Release Notes
 
-This release fixes the [issue affecting the accounts migration](https://github.com/cosmos/cosmos-sdk/issues/6828) from v0.38 to v0.39.
+This release fixes the [issue affecting the accounts migration](https://github.com/dbchaincloud/cosmos-sdk/issues/6828) from v0.38 to v0.39.
 
-See the [Cosmos SDK 0.39.1 milestone](https://github.com/cosmos/cosmos-sdk/milestone/29?closed=1) on our issue tracker for details.
+See the [Cosmos SDK 0.39.1 milestone](https://github.com/dbchaincloud/cosmos-sdk/milestone/29?closed=1) on our issue tracker for details.
 
 ## Remove custom JSON serialization for account types
 
@@ -12,7 +12,7 @@ with a more recent version of the Cosmos SDK.
 
 ## REST server's --unsafe-cors mode
 
-This a UX improvement [back ported from master](https://github.com/cosmos/cosmos-sdk/pull/6853) that allows developers to disable CORS
+This a UX improvement [back ported from master](https://github.com/dbchaincloud/cosmos-sdk/pull/6853) that allows developers to disable CORS
 restrictions during app development and testing by passing the `--unsafe-cors` option to the client's `rest-server` command.
 
 ## Tendermint 0.33.7

@@ -13,10 +13,10 @@ import (
 	rpchttp "github.com/dbchaincloud/tendermint/rpc/client/http"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/client/flags"
+	"github.com/dbchaincloud/cosmos-sdk/codec"
+	"github.com/dbchaincloud/cosmos-sdk/crypto/keys"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
 )
 
 // CLIContext implements a typical CLI context created in SDK modules for

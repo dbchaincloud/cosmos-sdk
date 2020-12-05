@@ -9,12 +9,12 @@ import (
 	"github.com/dbchaincloud/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/cosmos/cosmos-sdk/simapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/crisis"
-	distr "github.com/cosmos/cosmos-sdk/x/distribution"
-	"github.com/cosmos/cosmos-sdk/x/staking"
-	"github.com/cosmos/cosmos-sdk/x/supply"
+	"github.com/dbchaincloud/cosmos-sdk/simapp"
+	sdk "github.com/dbchaincloud/cosmos-sdk/types"
+	"github.com/dbchaincloud/cosmos-sdk/x/crisis"
+	distr "github.com/dbchaincloud/cosmos-sdk/x/distribution"
+	"github.com/dbchaincloud/cosmos-sdk/x/staking"
+	"github.com/dbchaincloud/cosmos-sdk/x/supply"
 )
 
 var (
