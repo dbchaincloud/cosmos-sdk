@@ -12,8 +12,8 @@ import (
 	"github.com/spf13/viper"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/libs/bech32"
-	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/dbchaincloud/tendermint/libs/bech32"
+	"github.com/dbchaincloud/tendermint/libs/cli"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	sdk "github.com/cosmos/cosmos-sdk/types"

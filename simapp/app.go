@@ -4,9 +4,9 @@ import (
 	"io"
 	"os"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	tmos "github.com/tendermint/tendermint/libs/os"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/libs/log"
+	tmos "github.com/dbchaincloud/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
 	bam "github.com/cosmos/cosmos-sdk/baseapp"

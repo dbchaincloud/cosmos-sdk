@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	tmtypes "github.com/dbchaincloud/tendermint/types"
 )
 
 // BeginBlocker iterates through and handles any newly discovered evidence of

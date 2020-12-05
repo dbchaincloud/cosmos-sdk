@@ -1,7 +1,7 @@
 package evidence_test
 
 import (
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/evidence"
 	"github.com/cosmos/cosmos-sdk/x/evidence/exported"
 	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
 
 	"github.com/stretchr/testify/suite"
 )

@@ -1,7 +1,7 @@
 package exported
 
 import (
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

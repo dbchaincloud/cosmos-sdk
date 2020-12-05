@@ -7,9 +7,9 @@ import (
 
 	"github.com/pkg/errors"
 	iavltree "github.com/tendermint/iavl"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto/merkle"
+	"github.com/dbchaincloud/tendermint/crypto/tmhash"
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/cosmos/cosmos-sdk/store/cachemulti"

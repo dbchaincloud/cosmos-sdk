@@ -9,11 +9,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/libs/log"
-	tmtypes "github.com/tendermint/tendermint/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/ed25519"
+	"github.com/dbchaincloud/tendermint/libs/log"
+	tmtypes "github.com/dbchaincloud/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/cosmos/cosmos-sdk/codec"

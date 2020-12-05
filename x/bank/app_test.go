@@ -1,7 +1,7 @@
 package bank_test
 
 import (
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -14,8 +14,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
 	"github.com/cosmos/cosmos-sdk/x/bank/internal/types"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto"
 )
 
 type (

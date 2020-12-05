@@ -4,10 +4,10 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/dbchaincloud/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
 
 	"github.com/stretchr/testify/require"
 

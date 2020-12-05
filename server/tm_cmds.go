@@ -9,11 +9,11 @@ import (
 	"github.com/spf13/viper"
 	yaml "gopkg.in/yaml.v2"
 
-	tcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
-	"github.com/tendermint/tendermint/libs/cli"
-	"github.com/tendermint/tendermint/p2p"
-	pvm "github.com/tendermint/tendermint/privval"
-	tversion "github.com/tendermint/tendermint/version"
+	tcmd "github.com/dbchaincloud/tendermint/cmd/tendermint/commands"
+	"github.com/dbchaincloud/tendermint/libs/cli"
+	"github.com/dbchaincloud/tendermint/p2p"
+	pvm "github.com/dbchaincloud/tendermint/privval"
+	tversion "github.com/dbchaincloud/tendermint/version"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

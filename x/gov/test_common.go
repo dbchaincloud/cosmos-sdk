@@ -5,14 +5,14 @@ package gov
 import (
 	"bytes"
 	"errors"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"log"
 	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"

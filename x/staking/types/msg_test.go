@@ -7,7 +7,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

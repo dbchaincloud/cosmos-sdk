@@ -18,9 +18,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/multisig"
+	"github.com/dbchaincloud/tendermint/libs/cli"
 )
 
 const (

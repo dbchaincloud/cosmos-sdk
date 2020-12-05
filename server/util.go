@@ -14,11 +14,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/cli"
-	tmflags "github.com/tendermint/tendermint/libs/cli/flags"
-	"github.com/tendermint/tendermint/libs/log"
+	tcmd "github.com/dbchaincloud/tendermint/cmd/tendermint/commands"
+	cfg "github.com/dbchaincloud/tendermint/config"
+	"github.com/dbchaincloud/tendermint/libs/cli"
+	tmflags "github.com/dbchaincloud/tendermint/libs/cli/flags"
+	"github.com/dbchaincloud/tendermint/libs/log"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/codec"

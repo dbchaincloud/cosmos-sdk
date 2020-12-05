@@ -17,4 +17,4 @@ restrictions during app development and testing by passing the `--unsafe-cors` o
 
 ## Tendermint 0.33.7
 
-Tendermint 0.33.7 brings an important regression fix. Please refer to [this bug report](https://github.com/tendermint/tendermint/issues/5112) for more information.
+Tendermint 0.33.7 brings an important regression fix. Please refer to [this bug report](https://github.com/dbchaincloud/tendermint/issues/5112) for more information.

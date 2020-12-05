@@ -3,7 +3,7 @@ package simulation
 import (
 	"math/rand"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/codec"

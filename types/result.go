@@ -9,7 +9,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/codec"
 
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
+	ctypes "github.com/dbchaincloud/tendermint/rpc/core/types"
 )
 
 // GasInfo defines tx execution gas context.

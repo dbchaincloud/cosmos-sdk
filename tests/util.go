@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	tmjsonrpc "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	rpchttp "github.com/dbchaincloud/tendermint/rpc/client/http"
+	ctypes "github.com/dbchaincloud/tendermint/rpc/core/types"
+	tmjsonrpc "github.com/dbchaincloud/tendermint/rpc/jsonrpc/client"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 )

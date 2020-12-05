@@ -4,8 +4,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 )
 
 // nolint:deadcode,unused,varcheck

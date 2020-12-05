@@ -3,7 +3,7 @@
 package rest
 
 import (
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -15,7 +15,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 )
 
 func TestBaseReqValidateBasic(t *testing.T) {

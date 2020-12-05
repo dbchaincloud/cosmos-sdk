@@ -6,12 +6,12 @@ import (
 
 	"github.com/tendermint/crypto/bcrypt"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/armor"
-	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
-	"github.com/tendermint/tendermint/crypto/xsalsa20symmetric"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/armor"
+	cryptoAmino "github.com/dbchaincloud/tendermint/crypto/encoding/amino"
+	"github.com/dbchaincloud/tendermint/crypto/xsalsa20symmetric"
 
-	tmos "github.com/tendermint/tendermint/libs/os"
+	tmos "github.com/dbchaincloud/tendermint/libs/os"
 
 	"github.com/cosmos/cosmos-sdk/crypto/keys/keyerror"
 )

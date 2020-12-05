@@ -6,13 +6,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmliteErr "github.com/tendermint/tendermint/lite/errors"
-	tmliteProxy "github.com/tendermint/tendermint/lite/proxy"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	tmtypes "github.com/tendermint/tendermint/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto/merkle"
+	tmbytes "github.com/dbchaincloud/tendermint/libs/bytes"
+	tmliteErr "github.com/dbchaincloud/tendermint/lite/errors"
+	tmliteProxy "github.com/dbchaincloud/tendermint/lite/proxy"
+	rpcclient "github.com/dbchaincloud/tendermint/rpc/client"
+	tmtypes "github.com/dbchaincloud/tendermint/types"
 
 	"github.com/cosmos/cosmos-sdk/store/rootmulti"
 	sdk "github.com/cosmos/cosmos-sdk/types"

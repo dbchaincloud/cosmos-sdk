@@ -1,6 +1,6 @@
 package keys
 
-import "github.com/tendermint/tendermint/crypto/algo"
+import "github.com/dbchaincloud/tendermint/crypto/algo"
 
 // SigningAlgo defines an algorithm to derive key-pairs which can be used for cryptographic signing.
 type SigningAlgo string

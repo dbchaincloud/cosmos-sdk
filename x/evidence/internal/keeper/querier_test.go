@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/evidence/exported"
 	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
 )
 
 const (

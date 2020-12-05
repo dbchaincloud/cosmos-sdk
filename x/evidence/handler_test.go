@@ -9,8 +9,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
 
 	"github.com/stretchr/testify/suite"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto/ed25519"
 )
 
 type HandlerTestSuite struct {

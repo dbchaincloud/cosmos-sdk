@@ -1,7 +1,7 @@
 package v0_36
 
 import (
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/types"
@@ -9,7 +9,7 @@ import (
 	v034accounts "github.com/cosmos/cosmos-sdk/x/genaccounts/legacy/v0_34"
 	v034gov "github.com/cosmos/cosmos-sdk/x/gov/legacy/v0_34"
 	v034staking "github.com/cosmos/cosmos-sdk/x/staking/legacy/v0_34"
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 
 	"github.com/stretchr/testify/require"
 )

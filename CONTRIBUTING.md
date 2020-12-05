@@ -65,7 +65,7 @@ Other notes:
 When proposing an architecture decision for the SDK, please create an [ADR](./docs/architecture/README.md)
 so further discussions can be made. We are following this process so all involved parties are in
 agreement before any party begins coding the proposed implementation. If you would like to see some examples
-of how these are written refer to [Tendermint ADRs](https://github.com/tendermint/tendermint/tree/master/docs/architecture)
+of how these are written refer to [Tendermint ADRs](https://github.com/dbchaincloud/tendermint/tree/master/docs/architecture)
 
 ## Pull Requests
 

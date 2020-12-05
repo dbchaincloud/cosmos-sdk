@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/tendermint/tendermint/crypto/sm2"
+	"github.com/dbchaincloud/tendermint/crypto/sm2"
 	"io/ioutil"
 	"testing"
 
@@ -12,7 +12,7 @@ import (
 
 	bip39 "github.com/cosmos/go-bip39"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 )
 
 type addrData struct {

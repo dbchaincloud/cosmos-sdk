@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/tendermint/iavl"
-	"github.com/tendermint/tendermint/crypto/merkle"
+	"github.com/dbchaincloud/tendermint/crypto/merkle"
 )
 
 // MultiStoreProof defines a collection of store proofs in a multi-store

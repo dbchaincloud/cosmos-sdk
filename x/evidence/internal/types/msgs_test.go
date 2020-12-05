@@ -1,7 +1,7 @@
 package types_test
 
 import (
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

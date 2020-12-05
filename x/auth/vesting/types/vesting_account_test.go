@@ -3,12 +3,12 @@ package types
 import (
 	"encoding/json"
 	"errors"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/require"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	tmtime "github.com/dbchaincloud/tendermint/types/time"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

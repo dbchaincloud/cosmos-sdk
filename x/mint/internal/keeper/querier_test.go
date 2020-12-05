@@ -9,7 +9,7 @@ import (
 	keep "github.com/cosmos/cosmos-sdk/x/mint/internal/keeper"
 	"github.com/cosmos/cosmos-sdk/x/mint/internal/types"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
 )
 
 func TestNewQuerier(t *testing.T) {

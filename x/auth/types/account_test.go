@@ -2,7 +2,7 @@ package types
 
 import (
 	"errors"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/codec"

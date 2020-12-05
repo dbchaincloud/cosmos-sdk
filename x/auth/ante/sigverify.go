@@ -3,12 +3,12 @@ package ante
 import (
 	"bytes"
 	"encoding/hex"
-	"github.com/tendermint/tendermint/crypto/sm2"
+	"github.com/dbchaincloud/tendermint/crypto/sm2"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/ed25519"
+	"github.com/dbchaincloud/tendermint/crypto/multisig"
+	"github.com/dbchaincloud/tendermint/crypto/secp256k1"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

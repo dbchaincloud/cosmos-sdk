@@ -7,7 +7,7 @@ import (
 
 	keep "github.com/cosmos/cosmos-sdk/x/gov/keeper"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
 )
 
 func TestImportExportQueues(t *testing.T) {

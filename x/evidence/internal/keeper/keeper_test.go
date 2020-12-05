@@ -2,7 +2,7 @@ package keeper_test
 
 import (
 	"encoding/hex"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
@@ -14,9 +14,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/supply"
 
 	"github.com/stretchr/testify/suite"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/ed25519"
 )
 
 var (

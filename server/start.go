@@ -9,13 +9,13 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/tendermint/tendermint/abci/server"
-	tcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	pvm "github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
+	"github.com/dbchaincloud/tendermint/abci/server"
+	tcmd "github.com/dbchaincloud/tendermint/cmd/tendermint/commands"
+	tmos "github.com/dbchaincloud/tendermint/libs/os"
+	"github.com/dbchaincloud/tendermint/node"
+	"github.com/dbchaincloud/tendermint/p2p"
+	pvm "github.com/dbchaincloud/tendermint/privval"
+	"github.com/dbchaincloud/tendermint/proxy"
 
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 )

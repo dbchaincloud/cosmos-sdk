@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmkv "github.com/tendermint/tendermint/libs/kv"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
+	tmtime "github.com/dbchaincloud/tendermint/types/time"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"

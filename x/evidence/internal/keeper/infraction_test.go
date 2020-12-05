@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/evidence/internal/types"
 	"github.com/cosmos/cosmos-sdk/x/staking"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto"
 )
 
 func newTestMsgCreateValidator(address sdk.ValAddress, pubKey crypto.PubKey, amt sdk.Int) staking.MsgCreateValidator {

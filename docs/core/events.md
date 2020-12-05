@@ -16,7 +16,7 @@ various messages and index transactions."
 Events are implemented in the Cosmos SDK as an alias of the ABCI `Event` type and
 take the form of: `{eventType}.{eventAttribute}={value}`.
 
-+++ https://github.com/tendermint/tendermint/blob/bc572217c07b90ad9cee851f193aaa8e9557cbc7/abci/types/types.pb.go#L2661-L2667
++++ https://github.com/dbchaincloud/tendermint/blob/bc572217c07b90ad9cee851f193aaa8e9557cbc7/abci/types/types.pb.go#L2661-L2667
 
 Events contain:
 
@@ -87,7 +87,7 @@ The main `eventCategory` you can subscribe to are:
 - `ValidatorSetUpdates`: Contains validator set updates for the block.
 
 These events are triggered from the `state` package after a block is committed. You can get the
-full list of `event` categories [here](https://godoc.org/github.com/tendermint/tendermint/types#pkg-constants).
+full list of `event` categories [here](https://godoc.org/github.com/dbchaincloud/tendermint/types#pkg-constants).
 
 The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are looking for. For example, a `transfer` transaction triggers an `event` of type `Transfer` and has `Recipient` and `Sender` as `attributes` (as defined in the [`events` file of the `bank` module](https://github.com/cosmos/cosmos-sdk/blob/master/x/bank/internal/types/events.go)). Subscribing to this `event` would be done like so:
 

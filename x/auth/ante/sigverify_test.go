@@ -2,14 +2,14 @@ package ante_test
 
 import (
 	"fmt"
-	"github.com/tendermint/tendermint/crypto/sm2"
+	"github.com/dbchaincloud/tendermint/crypto/sm2"
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/ed25519"
+	"github.com/dbchaincloud/tendermint/crypto/multisig"
+	"github.com/dbchaincloud/tendermint/crypto/secp256k1"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"

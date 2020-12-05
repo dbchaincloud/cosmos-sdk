@@ -3,7 +3,7 @@ package keys
 
 import (
 	"fmt"
-	"github.com/tendermint/tendermint/crypto/sm2"
+	"github.com/dbchaincloud/tendermint/crypto/sm2"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,8 +12,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keys/hd"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/ed25519"
 )
 
 func init() {

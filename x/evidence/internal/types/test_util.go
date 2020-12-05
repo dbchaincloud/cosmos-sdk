@@ -17,9 +17,9 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
+	"github.com/dbchaincloud/tendermint/crypto"
+	"github.com/dbchaincloud/tendermint/crypto/tmhash"
+	tmbytes "github.com/dbchaincloud/tendermint/libs/bytes"
 )
 
 var (

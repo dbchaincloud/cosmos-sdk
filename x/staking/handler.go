@@ -3,8 +3,8 @@ package staking
 import (
 	"time"
 
-	tmstrings "github.com/tendermint/tendermint/libs/strings"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmstrings "github.com/dbchaincloud/tendermint/libs/strings"
+	tmtypes "github.com/dbchaincloud/tendermint/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"

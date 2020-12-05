@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 
 	"github.com/pkg/errors"
-	"github.com/tendermint/tendermint/libs/log"
-	tmlite "github.com/tendermint/tendermint/lite"
-	tmliteproxy "github.com/tendermint/tendermint/lite/proxy"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
+	"github.com/dbchaincloud/tendermint/libs/log"
+	tmlite "github.com/dbchaincloud/tendermint/lite"
+	tmliteproxy "github.com/dbchaincloud/tendermint/lite/proxy"
+	rpchttp "github.com/dbchaincloud/tendermint/rpc/client/http"
 )
 
 const (

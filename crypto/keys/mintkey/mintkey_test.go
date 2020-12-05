@@ -3,15 +3,15 @@ package mintkey_test
 import (
 	"bytes"
 	"errors"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"io"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/crypto/keys"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/armor"
-	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
+	"github.com/dbchaincloud/tendermint/crypto/armor"
+	cryptoAmino "github.com/dbchaincloud/tendermint/crypto/encoding/amino"
 )
 
 func TestArmorUnarmorPrivKey(t *testing.T) {

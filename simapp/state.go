@@ -3,13 +3,13 @@ package simapp
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/tendermint/tendermint/crypto/sm2"
+	"github.com/dbchaincloud/tendermint/crypto/sm2"
 	"io"
 	"io/ioutil"
 	"math/rand"
 	"time"
 
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/dbchaincloud/tendermint/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	simapparams "github.com/cosmos/cosmos-sdk/simapp/params"

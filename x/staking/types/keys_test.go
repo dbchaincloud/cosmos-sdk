@@ -2,7 +2,7 @@ package types
 
 import (
 	"encoding/hex"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"math/big"
 	"testing"
 

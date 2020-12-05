@@ -3,8 +3,8 @@ package types_test
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/tendermint/tendermint/crypto/algo"
-	"github.com/tendermint/tendermint/crypto/sm2"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/sm2"
 	"math/rand"
 	"strings"
 	"testing"

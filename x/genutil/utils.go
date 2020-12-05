@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 	"time"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	tmtypes "github.com/tendermint/tendermint/types"
+	cfg "github.com/dbchaincloud/tendermint/config"
+	"github.com/dbchaincloud/tendermint/crypto"
+	tmos "github.com/dbchaincloud/tendermint/libs/os"
+	"github.com/dbchaincloud/tendermint/p2p"
+	"github.com/dbchaincloud/tendermint/privval"
+	tmtypes "github.com/dbchaincloud/tendermint/types"
 )
 
 // ExportGenesisFile creates and writes the genesis configuration to disk. An

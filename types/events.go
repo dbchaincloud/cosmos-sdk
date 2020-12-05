@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmkv "github.com/tendermint/tendermint/libs/kv"
+	abci "github.com/dbchaincloud/tendermint/abci/types"
+	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
 )
 
 // ----------------------------------------------------------------------------

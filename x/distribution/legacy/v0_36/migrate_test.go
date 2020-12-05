@@ -1,7 +1,7 @@
 package v0_36
 
 import (
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/types"

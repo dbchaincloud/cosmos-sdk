@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/params/subspace"
 	"github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/dbchaincloud/tendermint/libs/log"
 )
 
 // Keeper of the global paramstore

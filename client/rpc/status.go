@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
+	ctypes "github.com/dbchaincloud/tendermint/rpc/core/types"
 
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/client/flags"
@@ -15,7 +15,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/rest"
 	"github.com/cosmos/cosmos-sdk/version"
 
-	"github.com/tendermint/tendermint/p2p"
+	"github.com/dbchaincloud/tendermint/p2p"
 )
 
 // StatusCommand returns the command to return the status of the network.

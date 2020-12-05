@@ -3,13 +3,13 @@ package simulation
 import (
 	"encoding/binary"
 	"fmt"
-	"github.com/tendermint/tendermint/crypto/algo"
+	"github.com/dbchaincloud/tendermint/crypto/algo"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/require"
 
-	tmkv "github.com/tendermint/tendermint/libs/kv"
+	tmkv "github.com/dbchaincloud/tendermint/libs/kv"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

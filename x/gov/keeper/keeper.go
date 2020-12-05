@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/gov/types"
 	"github.com/cosmos/cosmos-sdk/x/supply/exported"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/dbchaincloud/tendermint/libs/log"
 )
 
 // Keeper defines the governance module Keeper
