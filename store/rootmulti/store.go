@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	iavltree "github.com/tendermint/iavl"
+	iavltree "github.com/dbchaincloud/iavl"
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	"github.com/dbchaincloud/tendermint/crypto/merkle"
 	"github.com/dbchaincloud/tendermint/crypto/tmhash"

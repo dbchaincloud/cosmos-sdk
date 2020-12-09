@@ -4,7 +4,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/tendermint/iavl"
+	"github.com/dbchaincloud/iavl"
 	abci "github.com/dbchaincloud/tendermint/abci/types"
 	"github.com/dbchaincloud/tendermint/crypto/merkle"
 	tmkv "github.com/dbchaincloud/tendermint/libs/kv"

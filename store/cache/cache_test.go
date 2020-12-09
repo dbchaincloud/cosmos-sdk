@@ -9,7 +9,7 @@ import (
 	"github.com/dbchaincloud/cosmos-sdk/store/types"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/iavl"
+	"github.com/dbchaincloud/iavl"
 	dbm "github.com/tendermint/tm-db"
 )
 

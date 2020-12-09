@@ -9,7 +9,8 @@ require (
 	github.com/btcsuite/btcd v0.20.1-beta
 	github.com/cosmos/go-bip39 v0.0.0-20180819234021-555e2067c45d
 	github.com/cosmos/ledger-cosmos-go v0.11.1
-	github.com/dbchaincloud/tendermint v0.33.8-0.20201205122011-125771e2e550
+	github.com/dbchaincloud/iavl v0.14.1-0.20201209071511-be7afd71a3c4
+	github.com/dbchaincloud/tendermint v0.33.8-0.20201209031923-7f51ff50057c
 	github.com/gogo/protobuf v1.3.1
 	github.com/golang/mock v1.3.1-0.20190508161146-9fa652df1129
 	github.com/gorilla/handlers v1.4.2
@@ -28,10 +29,11 @@ require (
 	github.com/tendermint/btcd v0.1.1
 	github.com/tendermint/crypto v0.0.0-20191022145703-50d29ede1e15
 	github.com/tendermint/go-amino v0.15.1
-	github.com/tendermint/iavl v0.14.0
 	github.com/tendermint/tm-db v0.5.1
 	google.golang.org/grpc v1.30.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0
 )
 
 replace github.com/keybase/go-keychain => github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4
+
+//replace github.com/dbchaincloud/iavl => /home/docker/go/src/newXJJ/dbchainclound/iavl
